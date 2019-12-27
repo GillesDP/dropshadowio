@@ -1,0 +1,25 @@
+{
+  "name": "dropshadowio",
+  "version": "1.0.0",
+  "description": "A tool to create amazing drop shadows.",
+  "main": "main.js",
+  "scripts": {
+    "sassprep": "sass --watch src/assets/scss/main.scss src/assets/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GillesDP/dropshadowio.git"
+  },
+  "keywords": [
+    "dropshadow"
+  ],
+  "author": "Gilles De Praetere",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GillesDP/dropshadowio/issues"
+  },
+  "homepage": "https://github.com/GillesDP/dropshadowio#readme",
+  "dependencies": {
+    "sass": "^1.24.0"
+  }
+}

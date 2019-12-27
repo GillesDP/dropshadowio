@@ -1,0 +1,252 @@
+/*** MAIN SETTINGS ***/
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600,700&display=swap);
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  transition: 0.2s;
+}
+
+img {
+  pointer-events: none;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.preload * {
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+::selection {
+  background: #391DD5;
+  color: white;
+}
+
+::-moz-selection {
+  background: #391DD5;
+  color: white;
+}
+
+/*** FONTS ***/
+/*** BOOTSTRAP ***/
+/*** CUSTOM ***/
+* {
+  font-family: "Work Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #1E1F4D;
+}
+
+p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #4B4C71;
+}
+
+h2 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #1E1F4D;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+input {
+  border: 0;
+  border-radius: 0.25em;
+}
+
+input:focus {
+  outline: none;
+}
+
+.navbar {
+  line-height: 4em;
+  padding: 0;
+  border-bottom: 1px solid #DDDDE4;
+}
+.navbar a {
+  color: #1E1F4D;
+}
+.navbar .navbar-brand {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #1E1F4D;
+}
+.navbar .navbar-toggler {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: #4B4C71;
+  border: 0;
+  padding: 0;
+  outline: none;
+}
+.navbar ul.navbar-nav a {
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 0.9em;
+}
+.navbar ul.navbar-nav a.nav-link {
+  padding-left: 4em;
+  position: relative;
+}
+@media (max-width: 767.98px) {
+  .navbar ul.navbar-nav a.nav-link {
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar ul.navbar-nav:first-child {
+    border-top: 1px solid #DDDDE4;
+  }
+}
+.navbar span.index {
+  color: #391DD5;
+  font-size: 0.75em;
+  position: absolute;
+  top: 0;
+}
+@media (max-width: 767.98px) {
+  .navbar span.index {
+    display: block;
+    top: -1.5em;
+    left: 46%;
+  }
+}
+.navbar span.arrow {
+  position: absolute;
+  right: 0;
+  color: #391DD5;
+}
+@media (max-width: 767.98px) {
+  .navbar .container {
+    padding: 0 1em;
+  }
+}
+
+footer {
+  background-color: #1E1F4D;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1em 0;
+}
+footer hr {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+footer h2 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: #4B4C71;
+  color: white;
+  display: inline-block;
+}
+@media (max-width: 991.98px) {
+  footer h2 {
+    display: block;
+    text-align: center;
+    margin-right: 0;
+  }
+}
+footer i {
+  color: rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  font-size: 0.9em;
+  font-style: normal;
+}
+@media (max-width: 991.98px) {
+  footer i {
+    display: block;
+    text-align: center;
+  }
+}
+footer ul {
+  margin: 2em 0;
+  list-style-type: none;
+  padding: 0;
+}
+footer ul li {
+  color: white;
+}
+footer ul li a {
+  color: rgba(255, 255, 255, 0.7);
+}
+footer ul li a:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+footer ul li:first-of-type {
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+@media (max-width: 991.98px) {
+  footer ul {
+    margin: 1em 0;
+  }
+}
+footer .credits a {
+  color: rgba(255, 255, 255, 0.3);
+}
+footer .credits a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+footer form {
+  width: 100%;
+}
+footer form input {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5em 1em;
+  color: white;
+  width: 75%;
+  display: inline-block;
+}
+@media (max-width: 991.98px) {
+  footer form input {
+    width: 100%;
+  }
+}
+footer form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+footer form input[type=submit] {
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  width: 20%;
+  font-size: 1em;
+  background-color: #1DD59C;
+  margin-left: 0.5em;
+}
+@media (max-width: 991.98px) {
+  footer form input[type=submit] {
+    width: 100%;
+    margin: 1em 0 0 0;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
