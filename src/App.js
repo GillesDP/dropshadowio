@@ -1,23 +1,12 @@
-import React from 'react';
-import './App.css';
+import React, {Fragment} from 'react';
+import Navbar from './components/essentials/Navbar';
+import Generator from './components/generator/Generator';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Generator/>
+    </Fragment>
   );
 }
 

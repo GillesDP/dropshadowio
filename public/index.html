@@ -3,9 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>React App</title>
+    <title>Dropshadow.io</title>
+
+    <link rel="stylesheet" type="text/css" href="reset.css">
   </head>
-  <body>
+  <body class="preload">
     <div id="root"></div>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+          document.querySelector('.preload').classList.remove('preload');
+        });
+    </script>
   </body>
 </html>
