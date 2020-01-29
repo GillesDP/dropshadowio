@@ -1,0 +1,14 @@
+html {font-size: 16px; scroll-behavior: smooth;}
+img {pointer-events: none;}
+* {
+   transition: .2s;
+   font-family: 'work sans', sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+   --port-gore: #1E1F4D;
+   --persian-blue: #391DD5;
+   --mulled-wine: #4B4C71;
+}

@@ -1,8 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# INFO
+### Colors
+| Name | hex | Used for |
+|:--|:--|:--|
+| Port Gore | `#1E1F4D` | Titles |
+| Persian Blue | `#391DD5` | Accent color |
+| Mulled Wine | `#4B4C71` | Paragraphs |
 
 ## Available Scripts
-
-In the project directory, you can run:
 
 ### `npm start`
 

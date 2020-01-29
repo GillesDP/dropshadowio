@@ -1,0 +1,21 @@
+.navbar {
+   line-height: 3em;
+   border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.navbar-toggler {
+   padding-right: 0;
+   border: 0;
+   border-radius: 0;
+   font-size: 1em;
+   font-weight: bold;
+   color: var(--mulled-wine);
+   letter-spacing: .1em;
+}
+.navbar-toggler:focus {
+   outline: none;
+}
+.navbar-toggler-icon {
+   width: auto;
+   height: auto;
+}

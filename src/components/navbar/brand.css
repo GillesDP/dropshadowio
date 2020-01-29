@@ -1,0 +1,8 @@
+a.navbar-brand {
+   color: var(--port-gore);
+   font-weight: bold;
+   font-size: 1.5em;
+}
+a.navbar-brand:hover {
+   color: var(--port-gore);
+}

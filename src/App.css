@@ -1,0 +1,25 @@
+/* TEXT */
+h1, h2, h3 {
+   color: #1E1F4D;
+}
+p {
+   color: #4B4C71;
+}
+
+/* LINKS */
+a {
+   display: inline-block;
+}
+a:hover {
+   text-decoration: none;
+   color: inherit;
+}
+
+/* LISTS */
+ul {
+   padding: 0;
+   margin: 0;
+}
+li {
+   list-style-type: none;
+}
