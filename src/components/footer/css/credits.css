@@ -1,0 +1,29 @@
+.credits {
+   padding: 1em 0;
+}
+
+.credits i {
+   color: rgba(255,255,255,.4);
+   font-style: normal;
+}
+.credits h2 {
+   color: white;
+   font-size: 1em;
+   font-weight: bold;
+   line-height: inherit;
+   margin: 0;
+   margin-right: 1em;
+}
+.credits a {
+   color: inherit;
+}
+.credits a:hover {
+   color: rgba(255,255,255,.8);
+}
+
+@media (max-width: 991.98px) {
+   .credits {
+      border-top: 1px solid rgba(255,255,255,.1);
+      text-align: center;
+   }
+}

@@ -1,0 +1,33 @@
+.subscribe {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.subscribe input {
+   border: 0;
+   background: rgba(255,255,255,.1);
+   color: white;
+   width: 100%;
+   margin-right: .5em;
+   padding: .5em 1em;
+}
+.subscribe input::placeholder {
+   color: rgba(255,255,255,.6);
+}
+
+.subscribe button {
+   border: 0;
+   background: var(--mountain-meadow);
+   color: white;
+   font-weight: bold;
+   padding: .5em 1.5em;
+}
+
+.subscribe input, .subscribe button {
+   border-radius: .25em;
+}
+.subscribe input:focus, .subscribe button:focus {
+   outline: 0;
+}
+

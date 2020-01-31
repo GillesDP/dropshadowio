@@ -1,5 +1,5 @@
 import React from 'react';
-import './brand.css';
+import './css/brand.css';
 
 function Brand() {
    return (<a className="navbar-brand" href="#">dropshadow.io</a>);

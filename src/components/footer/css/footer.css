@@ -1,0 +1,33 @@
+footer {
+   background: var(--port-gore);
+   color: white;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   padding-top: 3em;
+}
+
+footer ul {
+   margin-bottom: 1em;
+}
+
+footer li:first-child {
+   font-weight: bold;
+   margin-bottom: .5em;
+}
+footer li a {
+   color: rgba(255,255,255,.8);
+   margin-bottom: .25em;
+}
+footer li a:hover {
+   color: white;
+}
+
+@media (max-width: 991.98px) {
+   footer {
+      padding-top: 2em;
+   }
+   footer ul {
+      margin-bottom: 2em;
+   }
+}

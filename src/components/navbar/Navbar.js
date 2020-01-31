@@ -1,7 +1,7 @@
-import React, { createContext } from 'react';
+import React from 'react';
 import Navlink from './Navlink';
 import Brand from './Brand';
-import './navbar.css';
+import './css/navbar.css';
 
 const pages = [
    {
@@ -35,13 +35,5 @@ function Navbar() {
       </nav>
    );
 }
-
-/* <div className="container">
-      <ul>
-         {pages.map(c => {
-            return <Navlink link={c.link} content={c.content}/>;
-         })}
-      </ul>
-   </div> */
 
 export default Navbar;

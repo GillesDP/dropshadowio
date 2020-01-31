@@ -1,9 +1,9 @@
 /* TEXT */
 h1, h2, h3 {
-   color: #1E1F4D;
+   color: var(--port-gore);
 }
 p {
-   color: #4B4C71;
+   color: var(--mulled-wine);
 }
 
 /* LINKS */
