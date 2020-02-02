@@ -4,7 +4,7 @@ import './css/subscribe.css';
 function Subscribe() {
    return (
       <form className="subscribe">
-         <input type="email" placeholder="email"/>
+         <input type="email" placeholder="Email"/>
          <button>GO</button>
       </form>
    );

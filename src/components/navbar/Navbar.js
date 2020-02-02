@@ -26,8 +26,8 @@ function Navbar() {
 
             <div className="collapse navbar-collapse" id="navbarMenu">
                <ul className="navbar-nav ml-auto">
-                  {pages.map(c => {
-                    return <Navlink link={c.href} content={c.content}/> 
+                  {pages.map((c,i) => {
+                    return <Navlink link={c.href} content={c.content} key={i}/> 
                   })}
                </ul>
             </div>

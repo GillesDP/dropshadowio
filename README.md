@@ -1,4 +1,4 @@
-# INFO
+# Styleguide
 ### Colors
 | Name | hex | Used for |
 |:--|:--|:--|
@@ -7,9 +7,10 @@
 | `--mulled-wine` | `#4B4C71` | Paragraphs |
 | `--mountain-meadow` | `#1DD59C` | Form Button |
 
-# TODO
+# Todo
 - [ ] Footer: Increase clickable area for links
 
-# UPDATES
-**v 0.0.1** - Navigation Done
+# Updates
+**v 0.0.1** - Navigation Done\
 **v 0.0.2** - Footer Done + added superscript class to navigation
+**v 0.0.3** - Dragger Component Done

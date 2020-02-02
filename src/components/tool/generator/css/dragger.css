@@ -1,0 +1,33 @@
+.drag-area {
+   width: 180px;
+   height: 180px;
+   border: 2px solid rgba(0,0,0,.2);
+   border-style: dashed;
+   border-radius: .25em;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   background: white;
+   background: url(../images/axes.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: -1px -1px;
+}
+
+#dragger {
+   transform-origin: center center; /* Important to get valid values, sets center of dragger */
+   transition: none;
+   width: 2em;
+   height: 2em;
+   border-radius: 2em;
+   background: var(--persian-blue);
+   box-shadow: 0 3px 9px rgba(57, 29, 213, .5);
+}
+#dragger:active {
+   cursor: grab;
+}
+
+.random {
+   height: 1000px;
+}
