@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import './css/dragger.css';
 
-function Dragger() {
-   let [pos, setPos] = useState({x: 0, y: 0});
+function Dragger(props) {
    let [active, setActive] = useState(false);
    
    let draggerOffset = 16;
    let transformStyle = {
-      transform: `translate(${pos.x}px, ${pos.y}px)`
+      transform: `translate(${props.offset.x}px, ${props.offset.y}px)`
    }
 
    function handleMouseDown() {
@@ -24,6 +23,7 @@ function Dragger() {
 
       if (active) {
          let t = e.target
+
          if (t.className === 'drag-area') {
             // Using the .getBoundingClientRect() I can get an DOMRect obj containing: left, top, right, bottom, x, y, width, height. The positions are relative to the viewport. 
             let dragArea = t.getBoundingClientRect();
@@ -50,7 +50,6 @@ function Dragger() {
 
          newPosition(dragArea, dragger, mouseCoords);
       }
-      console.log(pos.x, pos.y);
    }
 
    function newPosition(area, item, mouseCoords) {
@@ -73,11 +72,11 @@ function Dragger() {
       if (yCoord <= -hBorder) return;
       
       // Keep in mind, the y-value is negative when the dragger goes up because of the css transform
-      setPos({x: Math.floor(xCoord), y: Math.floor(yCoord)});
+      props.changeOffset({x: Math.floor(xCoord), y: Math.floor(yCoord)});
    }
 
    return (
-      <div className="drag-area" onMouseMove={handleMouseMove} onClick={handleMouseClick} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>
+      <div className="drag-area" onMouseMove={handleMouseMove} onMouseDown={handleMouseDown} onClick={handleMouseClick} onMouseUp={handleMouseUp}>
          <div id="dragger" style={transformStyle}></div>
       </div>
    );

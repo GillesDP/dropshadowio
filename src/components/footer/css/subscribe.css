@@ -11,6 +11,7 @@
    width: 100%;
    margin-right: .5em;
    padding: .5em 1em;
+   font-weight: normal;
 }
 .subscribe input::placeholder {
    color: rgba(255,255,255,.6);

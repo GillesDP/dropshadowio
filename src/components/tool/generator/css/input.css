@@ -11,7 +11,7 @@
 }
 
 .generator-input .input-group-append {
-   background-color: #EFEFF0;
+   background-color: #DDDDE4;
 }
 
 .generator-input .input-group-append .input-group-text, label {
@@ -32,3 +32,5 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 input[type=number] {
    -moz-appearance:textfield;
 }
+input {color: var(--port-gore); font-weight: 600;}
+input:focus {outline: none;}

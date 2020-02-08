@@ -1,0 +1,36 @@
+.slider-input {
+   display: inline-block;
+}
+
+.slider-input input {
+   border: 2px solid var(--persian-blue);
+   border-radius: .25em;
+   padding: .25em .5em;
+   width: 3em;
+   text-align: center;
+   z-index: 2;
+}
+.slider-input input:focus {
+   cursor: all-scroll;
+}
+
+.slider-axis {
+   width: 250px;
+   height: .5em;
+   border-radius: .5em;
+   background: #DDDDE4;
+   display: flex;
+   /* justify-content: center; */
+   align-items: center;
+   position: relative;
+}
+
+.slider-range {
+   transition: none !important;
+   height: .5em;
+   background: var(--persian-blue);
+   position: absolute;
+   z-index: 1;
+   left: 0;
+   border-radius: .5em 0 0 .5em;
+}
