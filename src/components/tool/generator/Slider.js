@@ -3,13 +3,17 @@ import './css/slider.css';
 
 function Slider(props) {
    let sliderElement = React.createRef();
+   let draggerOffset = 25
    const [active, setActive] = useState(false);
    const [exact, setExact] = useState(0);
 
    let transformStyle = {
-      transform: `translate(${exact}px, 0px)`,
+      transform: `translate(${props.center ? exact : exact - draggerOffset}px, 0px)`,
       transition: "none",
       transformOrigin: "center center"
+   }
+   let axisStyle = {
+      width: `${props.center ? exact+125+"px" : exact+"px"}`
    }
    
 
@@ -18,9 +22,11 @@ function Slider(props) {
    function handleMouseDown() {
       setActive(true);
    }
+
    function handleMouseUp() {
       setActive(false)
    }  
+
    function handleMouseMove(e) {
       e.preventDefault();
       const mouseCoords = [e.clientX, e.clientY];
@@ -29,21 +35,31 @@ function Slider(props) {
          newPosition(mouseCoords);
       }
    }
+
    function handleClick(e) {
       e.preventDefault();
       const mouseCoords = [e.clientX, e.clientY];
       
       newPosition(mouseCoords);
    }
+
    function handleChange(e) {
       let area = sliderElement.current.getBoundingClientRect();
       let inputValue = e.target.value;
 
-      // Doesn't work yet!!
-      setExact(checkBorders(xCoord, area));
-      props.changeValue(Math.floor(exact / calculateScale(area)));
-      // props.changeValue(Math.floor(checkBorders(inputValue, area) / calculateScale(area)));
-      // setExact(checkBorders(inputValue, area));
+      // Define exact value
+      let exactValue = inputValue * calculateScale(area);
+
+      // Change value by checking if exact value is within borders, then devide by scale
+      props.changeValue(checkBorders(exactValue, area) / calculateScale(area));
+
+      // If the input is empty, the value should also be empty
+      if (inputValue === "") {
+         props.changeValue("");
+      }
+
+      // Set exact position
+      setExact(checkBorders(exactValue, area));   
    }
 
 
@@ -53,14 +69,19 @@ function Slider(props) {
       // Define area and (drag)item
       let area = sliderElement.current.getBoundingClientRect();
       let item = document.getElementById(props.id);
+
+      // Highlight input text on click
+      item.select();
       
+      // If dragger is not centered, draggerOffset should be zero (in order to not conflict with transform)
+      if (!props.center) draggerOffset = 0;
       // Calculate the xCoord with formula ( -25 => dragger offset)
-      let xCoord = Math.floor(mouseCoords[0] - area.left - item.offsetLeft -25);
+      let xCoord = Math.floor(mouseCoords[0] - area.left - item.offsetLeft - draggerOffset);
 
       // Set exact position of dragger
       setExact(checkBorders(xCoord, area));
       
-      // Devide exact position by scale
+      // Change value by deviding exact position by scale
       props.changeValue(Math.floor(exact / calculateScale(area)));
    }
 
@@ -82,9 +103,9 @@ function Slider(props) {
    }
 
    function calculateScale(area) {
-      let difference = -props.boundries[0] + props.boundries[1]; // ex: 25
-      let exactWidth = area.width; // ex: 250
-      return (exactWidth / difference); // ex: 10
+      let difference = -props.boundries[0] + props.boundries[1]; // ex. 25
+      let exactWidth = area.width; // ex. 250
+      return (exactWidth / difference); // ex. 10
    }
 
    return (
@@ -98,17 +119,15 @@ function Slider(props) {
          >
          <label htmlFor={props.id}> {props.label} </label>
          <div className="slider-axis" style={props.center ? {justifyContent: "center"} : null}>
-            <div className="slider-range"></div>
+            <div className="slider-range" style={axisStyle}></div>
             <input 
                className="test" 
                id={props.id} 
                value={props.value} 
                type="number" 
-               min="0" 
-               max="50" 
                style={transformStyle} 
                onChange={handleChange}
-            />
+               />
          </div>
       </div>
    );

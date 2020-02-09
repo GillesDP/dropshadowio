@@ -1,0 +1,32 @@
+.radio-group {
+   display: inline-block;
+   border-radius: .2em;
+}
+
+.radio-group button {
+   color: var(--port-gore);
+   text-transform: uppercase;
+   font-weight: 600;
+   border: 0;
+   border-top: 1px solid #DDDDE4;
+   border-bottom: 1px solid #DDDDE4;
+   padding: .5em 1em;
+   background: white;
+}
+.radio-group button:first-child {
+   border-left: 1px solid #DDDDE4;
+   border-radius: .2em 0 0 .2em;
+}
+.radio-group button:last-child {
+   border-right: 1px solid #DDDDE4;
+   border-radius: 0 .2em .2em 0;
+}
+
+.radio-active {
+   background: var(--persian-blue);
+}
+
+
+button:focus {
+   outline: 0;
+}

@@ -1,5 +1,5 @@
 .generator-input input {
-   border: 1px solid rgba(0,0,0,.2);
+   border: 1px solid #DDDDE4;
    border-radius: .2em 0 0 .2em;
    padding: .5em 1em;
    font-weight: 600;
@@ -12,6 +12,7 @@
 
 .generator-input .input-group-append {
    background-color: #DDDDE4;
+   border-radius: 0 .2em .2em 0;
 }
 
 .generator-input .input-group-append .input-group-text, label {
