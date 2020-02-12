@@ -1,22 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './css/radio.css';
 
 function Radio(props) {
+   const [selected, setSelected] = useState(props.default);
+   
+   function handleChange(e) {
+      let value = e.target.value;
+      setSelected(value);
+      checkInsetOutset(value);
+   }
 
-   function handleClick(e) {
-      let el = e.target
-      if (el.id === "outsetRadio") {
+   function checkInsetOutset(val) {
+      if (val === props.default) {
          props.changeValue(true);
-      } else if (el.id === "insetRadio") {
+      } else if (val === props.options[1]) {
          props.changeValue(false);
-      }
+      } else return;
    }
 
    return (
       <div className="radio-group">
          {props.options.map((c, i) => {
             return (
-               <button key={i} id={`${c}Radio`} onClick={handleClick}>{c} {props.value.toString()}</button>
+               <React.Fragment key={i}>
+                  <input 
+                     type="radio" 
+                     id={`${c}Radio`} 
+                     name={props.name} 
+                     checked={selected === c ? true : false}
+                     value={c} 
+                     onChange={handleChange}
+                     />
+                  <button>
+                     <label htmlFor={`${c}Radio`} key={i}><div className="radio-icon"></div> {c}</label>
+                  </button>
+               </React.Fragment>
             );
          })}
       </div>
@@ -25,7 +43,9 @@ function Radio(props) {
 
 /*
 PROPS:
-   - options: array
+   - options: array (radio items)
+   - name: string (name of radio group)
+   - default: string (default value that's selected)
 */
 
 export default Radio;

@@ -6,12 +6,12 @@ function Input(props) {
    function handleChange(e) {
       // Set input borders
       let value;
-      if (e.target.value >= -90 && e.target.value <= 90) {
+      if (e.target.value >= -110 && e.target.value <= 110) {
          value = e.target.value;
-      } else if (e.target.value <= -90) {
-         value = -90;
-      } else if (e.target.value >= 90) {
-         value = 90;
+      } else if (e.target.value <= -110) {
+         value = -110;
+      } else if (e.target.value >= 110) {
+         value = 110;
       } else {
          value = 0;
       }

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Generator from './generator/Generator';
+import Debug from './Debug';
 
 function Tool() {
    const [data, setData] = useState({
@@ -10,10 +11,15 @@ function Tool() {
    });
 
    return (
-      <Generator 
-         data={data}
-         changeData={(obj) => setData(obj)} 
-      />
+      <React.Fragment>
+         <Generator 
+            data={data}
+            changeData={(obj) => setData(obj)} 
+         />
+         <Debug
+            data={data}
+         />
+      </React.Fragment>
    );
 }
 

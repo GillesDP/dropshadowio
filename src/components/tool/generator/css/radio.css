@@ -1,31 +1,54 @@
 .radio-group {
-   display: inline-block;
    border-radius: .2em;
+   display: flex;
 }
 
+/* BUTTONS */
 .radio-group button {
    color: var(--port-gore);
    text-transform: uppercase;
    font-weight: 600;
+   width: auto;
    border: 0;
-   border-top: 1px solid #DDDDE4;
-   border-bottom: 1px solid #DDDDE4;
-   padding: .5em 1em;
+   border-top: 1px solid var(--mischka);
+   border-bottom: 1px solid var(--mischka);
+   padding: 0;
    background: white;
 }
-.radio-group button:first-child {
-   border-left: 1px solid #DDDDE4;
+.radio-group button:first-of-type {
+   border-left: 1px solid var(--mischka);
    border-radius: .2em 0 0 .2em;
 }
-.radio-group button:last-child {
-   border-right: 1px solid #DDDDE4;
+.radio-group button:last-of-type {
+   border-right: 1px solid var(--mischka);
    border-radius: 0 .2em .2em 0;
 }
-
-.radio-active {
-   background: var(--persian-blue);
+.radio-group button:hover {
+   cursor: pointer;
 }
 
+/* INPUTS */
+.radio-group input {
+   display: none;
+}
+.radio-group input[type="radio"]:checked + button {
+   background: var(--persian-blue);
+   border-color: var(--persian-blue);
+}
+.radio-group input[type="radio"]:checked + button label {
+   color: white;
+}
+
+/* LABELS */
+.radio-group label {
+   color: var(--port-gore);
+   padding: .5em 1em;
+   margin: 0;
+   position: relative;
+}
+.radio-group label:hover {
+   cursor: pointer;
+}
 
 button:focus {
    outline: 0;

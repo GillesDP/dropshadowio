@@ -5,6 +5,11 @@ h1, h2, h3 {
 p {
    color: var(--mulled-wine);
 }
+small {
+   text-transform: uppercase;
+   font-weight: 600;
+   letter-spacing: 1px;
+}
 
 /* LINKS */
 a {

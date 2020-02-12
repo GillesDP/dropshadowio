@@ -1,8 +1,7 @@
 footer {
    background: var(--port-gore);
    color: white;
-   position: absolute;
-   bottom: 0;
+   display: block;
    width: 100%;
    padding-top: 4em;
 }

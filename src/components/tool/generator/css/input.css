@@ -1,5 +1,5 @@
 .generator-input input {
-   border: 1px solid #DDDDE4;
+   border: 1px solid var(--mischka);
    border-radius: .2em 0 0 .2em;
    padding: .5em 1em;
    font-weight: 600;
@@ -11,7 +11,7 @@
 }
 
 .generator-input .input-group-append {
-   background-color: #DDDDE4;
+   background-color: var(--mischka);
    border-radius: 0 .2em .2em 0;
 }
 

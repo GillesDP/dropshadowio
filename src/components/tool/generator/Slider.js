@@ -59,7 +59,7 @@ function Slider(props) {
       }
 
       // Set exact position
-      setExact(checkBorders(exactValue, area));   
+      setExact(checkBorders(exactValue, area));
    }
 
 
@@ -78,11 +78,14 @@ function Slider(props) {
       // Calculate the xCoord with formula ( -25 => dragger offset)
       let xCoord = Math.floor(mouseCoords[0] - area.left - item.offsetLeft - draggerOffset);
 
+      // Please note, using exact in props.changeValue won't work. That's why we have a seperate variable to define the incoming value
+      let val = checkBorders(xCoord, area);
+
       // Set exact position of dragger
-      setExact(checkBorders(xCoord, area));
+      setExact(val);
       
       // Change value by deviding exact position by scale
-      props.changeValue(Math.floor(exact / calculateScale(area)));
+      props.changeValue(Math.floor(val / calculateScale(area)));
    }
 
    function checkBorders(value, area) {
@@ -121,7 +124,6 @@ function Slider(props) {
          <div className="slider-axis" style={props.center ? {justifyContent: "center"} : null}>
             <div className="slider-range" style={axisStyle}></div>
             <input 
-               className="test" 
                id={props.id} 
                value={props.value} 
                type="number" 

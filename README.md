@@ -13,6 +13,7 @@
 - [x] Slider: Do not fallback on 0 when clearing input
 - [ ] Slider: Center axisStyle variable width (remove "125" hard-coded)
 - [ ] Slider: Allow use to enter values above border, but clip at exact border
+- [ ] Slider: False values on click
 - [ ] Make sliders & dragger usable on mobile
 
 # Updates

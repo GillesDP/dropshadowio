@@ -8,7 +8,13 @@ function App() {
   return (
     <React.Fragment>
       <Navbar/>
-      <Tool/>
+      <div className="container">
+         <div className="row">
+            <div className="col-lg-8">
+               <Tool/>
+            </div>
+         </div>
+      </div>
       <Footer/>
     </React.Fragment>
   );
