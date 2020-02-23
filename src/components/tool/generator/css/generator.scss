@@ -14,13 +14,44 @@
       border-bottom: 1px solid color(border);
       font-size: .9rem;
    }
+   legend {
+      @include spaced-text;
+      display: inline-block;
+   }
+   fieldset {
+      display: inline-block;
+   }
 }
 
 .generator-container {
-   padding: 1em;
+   padding: 1.5em;
+   @include max-md {padding: 1em;}
 }
 
 /* Sections */
+.generator-positioning {
+   .generator-container {
+      display: flex;
+      flex-wrap: wrap;
+   }
+   .generator-input {
+      margin-right: 1em;
+   }
+   .slider-input {
+      display: block;
+      margin: 1em 0 1.5em 2em;
+      @include max-md {margin-left: 0;}
+      &:last-of-type {
+         margin-bottom: 0;
+      }
+   }
+   fieldset {
+      margin-left: 2em;
+      display: block;
+      @include max-md {margin-left: 0;}
+   }
+}
+
 .generator-radio {
    display: flex;
    align-items: center;

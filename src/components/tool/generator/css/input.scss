@@ -2,6 +2,7 @@
 @import 'base/mixins';
 
 .generator-input {
+   display: inline-block;
    input {
       border: 1px solid color(border);
       border-radius: .2em 0 0 .2em;

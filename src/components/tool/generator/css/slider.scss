@@ -13,10 +13,13 @@
          cursor: ew-resize;
       }
    }
+   label {
+      margin-bottom: 1em;
+   }
 }
 
 .slider-axis {
-   width: 250px;
+   width: 100%;
    height: .5em;
    border-radius: .5em;
    background: #DDDDE4;

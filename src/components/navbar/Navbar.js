@@ -3,17 +3,6 @@ import Navlink from './Navlink';
 import Brand from './Brand';
 import './css/navbar.scss';
 
-const pages = [
-   {
-      href: "#",
-      content: "Presets"
-   },
-   {
-      href: "#",
-      content: "How to use"
-   }
-]
-
 function Navbar() {
    return (
       <nav className="navbar navbar-expand-lg">
@@ -26,9 +15,8 @@ function Navbar() {
 
             <div className="collapse navbar-collapse" id="navbarMenu">
                <ul className="navbar-nav ml-auto">
-                  {pages.map((c,i) => {
-                    return <Navlink link={c.href} content={c.content} key={i}/> 
-                  })}
+                  <Navlink link="/presets" content="presets" key={1}/>
+                  <Navlink link="/how-to-use" content="how to use" key={2}/>
                </ul>
             </div>
          </div>

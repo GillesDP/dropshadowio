@@ -13,7 +13,7 @@ function Slider(props) {
       transformOrigin: "center center"
    }
    let axisStyle = {
-      width: `${props.center ? exact+125+"px" : exact+"px"}`
+      width: `${props.center ? exact+200+"px" : exact+"px"}`
    }
    
 

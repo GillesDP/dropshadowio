@@ -1,8 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './css/brand.scss';
 
 function Brand() {
-   return (<a className="navbar-brand" href="#">dropshadow.io</a>);
+   return (
+      <Link className="navbar-brand" to="/">dropshadow.io</Link>
+   );
 }
 
 export default Brand;

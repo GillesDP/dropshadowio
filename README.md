@@ -15,11 +15,5 @@
 - [ ] Slider: Center axisStyle variable width (remove "125" hard-coded)
 - [ ] Slider: Allow use to enter values above border, but clip at exact border
 - [x] Slider: False values on click
+- [ ] Slider: Snap box on end of slider (don't go over it)
 - [ ] Make sliders & dragger usable on mobile
-
-# Updates
-**v 0.0.1** - Navigation Done\
-**v 0.0.2** - Footer Done + added superscript class to navigation\
-**v 0.0.3** - Dragger Component Done\
-**v 0.0.4** - Added basic functionality to Slider component\
-**v 0.0.4.1** - Slider Done + started working on radio (inset/outset)

@@ -1,14 +1,25 @@
 import React from 'react';
+import styles from './Debug.module.scss';
 
 function Debug(props) {
    return (
-      <div style={{color: "black"}}>
-         <p>
-            X: {props.data.offset.x} Y: {props.data.offset.y} <br/>
+      <div className={styles.debug}>
+         <div className={styles.settings}>
             Blur: {props.data.blur} <br/>
             Spread: {props.data.spread} <br/>
             Outset: {props.data.outset.toString()}
-         </p>
+         </div>
+         <div className={styles.coords}>
+            X: {props.data.offset.x} <br/>
+            Y: {props.data.offset.y}
+         </div>
+         <div className={styles.colors}>
+            <ul>
+               <li>Shadow :{props.data.colors.shadow.toString()}</li>
+               <li>Box: {props.data.colors.box.toString()}</li>
+               <li>Background: {props.data.colors.background.toString()}</li>
+            </ul>
+         </div>
       </div>
    );
 }

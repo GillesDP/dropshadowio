@@ -29,20 +29,22 @@ function Input(props) {
    }
 
    return (
-      <div className="input-group generator-input">
-         <input 
-            type={props.type}
-            id={props.id} 
-            name={props.name}
-            value={props.value}
-            onChange={handleChange}
-            min="-90"
-            max="90"
-         />
-         <div className="input-group-append">
-            <span className="input-group-text">{props.id.substring(0,1)}</span>
+      <div className="generator-input">
+         <div className="input-group">
+            <input 
+               type={props.type}
+               id={props.id} 
+               name={props.name}
+               value={props.value}
+               onChange={handleChange}
+               min="-90"
+               max="90"
+            />
+            <div className="input-group-append">
+               <span className="input-group-text">{props.id.substring(0,1)}</span>
+            </div>
          </div>
-      </div>      
+      </div>  
    );
 }
 
