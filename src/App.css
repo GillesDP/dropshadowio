@@ -28,3 +28,16 @@ ul {
 li {
    list-style-type: none;
 }
+
+/* FORMS */
+fieldset {
+   display: flex;
+   width: 100%;
+}
+legend {
+   font-size: 1rem;
+   text-transform: uppercase;
+   color: var(--mulled-wine);
+   font-weight: 600;
+   display: block;
+}

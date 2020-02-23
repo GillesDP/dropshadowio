@@ -7,7 +7,12 @@ function Tool() {
       offset: {x: 0, y: 0},
       blur: 0,
       spread: 0,
-      outset: true
+      outset: true,
+      colors: {
+         shadow: "#000000",
+         box: "#391DD5",
+         background: "#FFFFF"
+      }
    });
 
    return (

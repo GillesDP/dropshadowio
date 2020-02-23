@@ -1,0 +1,50 @@
+@import 'base/colors';
+@import 'base/mixins';
+
+.generator-input {
+   input {
+      border: 1px solid color(border);
+      border-radius: .2em 0 0 .2em;
+      padding: .5em 1em;
+      font-weight: 600;
+      color: color(black);
+      width: 5em;
+      border-right: 0;
+      &:focus {outline: none;}
+   }
+   .input-group-append {
+      border-radius: 0 .2em .2em 0;
+      .input-group-text {
+         text-transform: uppercase;
+         font-weight: 600;
+         letter-spacing: 1px;
+         color: rgba(75, 76, 113, .6);
+         background: none;
+         border-left: 0;
+      }
+   }
+}
+
+label {
+   @include spaced-text;
+   color: rgba(75, 76, 113, .6);
+   background: none;
+   border-left: 0;
+   width: 100%;
+   color: color(text);
+}
+
+input {
+   color: color(black); 
+   font-weight: 600;
+   &:focus {
+      outline: none;
+   }
+   &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+   }
+   &[type=number] {
+      -moz-appearance: textfield;
+   }
+}

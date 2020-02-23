@@ -1,0 +1,30 @@
+@import 'base/colors';
+@import 'base/mixins';
+
+.generator {
+   border: 1px solid color(border);
+   border-radius: .25em;
+   small {
+      @include spaced-text;
+      color: color(black);
+      width: 100%;
+      display: block;
+      background: #F1F1F3;
+      padding: .3em 1em;
+      border-bottom: 1px solid color(border);
+      font-size: .9rem;
+   }
+}
+
+.generator-container {
+   padding: 1em;
+}
+
+/* Sections */
+.generator-radio {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 1em;
+   border-top: 1px solid color(border);
+}

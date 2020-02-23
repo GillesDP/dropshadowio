@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './css/dragger.css';
+import './css/dragger.scss';
 
 function Dragger(props) {
    let [active, setActive] = useState(false);

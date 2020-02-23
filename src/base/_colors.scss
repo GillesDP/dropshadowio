@@ -1,0 +1,20 @@
+// Variables
+$hex--port-gore: #1E1F4D;
+$hex--persian-blue: #391DD5;
+$hex--mulled-wine: #4B4C71;
+$hex--mountain-meadow: #1DD59C;
+$hex--mischka: #D2D2D9;
+
+// Map
+$colors: (
+  black: $hex--port-gore,
+  blue: $hex--persian-blue,
+  text: $hex--mulled-wine,
+  green: $hex--mountain-meadow,
+  border: $hex--mischka
+);
+
+// Function
+@function color($args) {
+   @return map-get($colors, $args);
+}

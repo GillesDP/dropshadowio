@@ -1,0 +1,39 @@
+@import 'base/colors';
+@import 'base/mixins';
+
+a.nav-link {
+   @include spaced-text;
+   color: color(black);
+   position: relative;
+   &:hover {
+      color: color(black);
+      opacity: .9;
+   }
+   @include max-md {
+      text-align: center;
+      margin: .25em 0;
+      &:hover .arrow, &:active .arrow {
+         right: -.25em;
+      }
+   }
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+   padding: 0;
+   padding-left: 4em;
+   @include max-md {
+      padding: 0;
+   }
+}
+
+.arrow {
+   position: absolute;
+   right: 0;
+   color: color(blue);
+}
+
+@include max-md {
+   ul.navbar-nav {
+      margin-top: 1em;
+   }
+}

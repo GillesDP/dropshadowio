@@ -1,7 +1,7 @@
 import React from 'react';
 import Navlink from './Navlink';
 import Brand from './Brand';
-import './css/navbar.css';
+import './css/navbar.scss';
 
 const pages = [
    {

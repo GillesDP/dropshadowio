@@ -1,0 +1,27 @@
+@import 'base/mixins';
+
+.credits {
+   padding: 1em 0;
+   i {
+      color: rgba(255,255,255,.4);
+      font-style: normal;
+   }
+   h2 {
+      color: white;
+      font-size: 1em;
+      font-weight: bold;
+      line-height: inherit;
+      margin: 0;
+      margin-right: 1em;
+   }
+   a {
+      color: inherit;
+      &:hover {
+         color: rgba(255,255,255,.8);
+      }
+   }
+   @include max-md {
+      border-top: 1px solid rgba(255,255,255,.1);
+      text-align: center;
+   }
+}

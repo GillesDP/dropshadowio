@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './css/generator.css';
+import './css/generator.scss';
 import Dragger from './Dragger';
 import Input from './Input';
 import Slider from './Slider';
@@ -45,8 +45,13 @@ function Generator(props) {
             <small>positioning</small>
             <div className="generator-container">
                <Dragger changeOffset={setOffset} offset={offset} />
-               <Input label="x-offset" id="xOffset" name="xoff" type="number" value={offset.x} changeData={props.changeData}/>
-               <Input label="y-offset" id="yOffset" name="yoff" type="number" value={offset.y} changeData={props.changeData}/>
+
+               <fieldset>
+                  <legend>Offset</legend>
+                  <Input label="x-offset" id="xOffset" name="xoff" type="number" value={offset.x} changeData={props.changeData}/>
+                  <Input label="y-offset" id="yOffset" name="yoff" type="number" value={offset.y} changeData={props.changeData}/>
+               </fieldset>
+               
                <Slider label="blur" id="blur" name="blur" changeValue={setBlur} value={blur} center={false} boundries={[0, 50]}/>
                <Slider label="spread" id="spread" name="spread" changeValue={setSpread} value={spread} center={true} boundries={[-25, 25]}/>
             </div>

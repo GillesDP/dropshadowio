@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/credits.css';
+import './css/credits.scss';
 
 const year = new Date().getFullYear();
 

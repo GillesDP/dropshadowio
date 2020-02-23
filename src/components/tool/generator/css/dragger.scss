@@ -1,3 +1,5 @@
+@import 'base/colors';
+
 .drag-area {
    width: 220px;
    height: 220px;
@@ -13,6 +15,12 @@
    background-size: contain;
    background-repeat: no-repeat;
    background-position: -1px -1px;
+   &:hover {
+      cursor: grab;
+   }
+   &:active {
+      cursor: grabbing;
+   }
 }
 
 #dragger {
@@ -21,11 +29,8 @@
    width: 2em;
    height: 2em;
    border-radius: 2em;
-   background: var(--persian-blue);
+   background: color(blue);
    box-shadow: 0 3px 9px rgba(57, 29, 213, .5);
-}
-#dragger:active {
-   cursor: grab;
 }
 
 .random {

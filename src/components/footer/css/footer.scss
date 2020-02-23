@@ -1,0 +1,30 @@
+@import 'base/colors';
+@import 'base/mixins';
+
+footer {
+   background: color(black);
+   color: white;
+   display: block;
+   width: 100%;
+   padding-top: 4em;
+   ul {
+      margin-bottom: 3em;
+      @include max-md {
+         margin-bottom: 2em;
+      }
+   }
+   li a {
+      color: rgba(255,255,255,.8);
+      margin-bottom: .25em;
+      &:hover {
+         color: white;
+      }
+   }
+   li:first-child {
+      font-weight: 600;
+      margin-bottom: .5em;
+   }
+   @include max-md {
+      padding-top: 2em;
+   }
+}

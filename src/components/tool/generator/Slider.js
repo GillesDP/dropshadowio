@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './css/slider.css';
+import './css/slider.scss';
 
 function Slider(props) {
    let sliderElement = React.createRef();

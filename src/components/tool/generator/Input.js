@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/input.css';
+import './css/input.scss';
 
 function Input(props) {
 
@@ -30,7 +30,6 @@ function Input(props) {
 
    return (
       <div className="input-group generator-input">
-         <label htmlFor={props.id}>{props.label}</label>
          <input 
             type={props.type}
             id={props.id} 
@@ -41,7 +40,7 @@ function Input(props) {
             max="90"
          />
          <div className="input-group-append">
-            <span className="input-group-text">px</span>
+            <span className="input-group-text">{props.id.substring(0,1)}</span>
          </div>
       </div>      
    );

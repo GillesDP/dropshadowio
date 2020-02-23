@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './css/radio.css';
+import './css/radio.scss';
 
 function Radio(props) {
    const [selected, setSelected] = useState(props.default);

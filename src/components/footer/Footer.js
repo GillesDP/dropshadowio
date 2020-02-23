@@ -1,7 +1,7 @@
 import React from 'react';
 import Credits from './Credits';
 import Subscribe from './Subscribe';
-import './css/footer.css';
+import './css/footer.scss';
 
 function Footer() {
    return (
