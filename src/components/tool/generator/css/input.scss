@@ -1,17 +1,10 @@
 @import 'base/colors';
 @import 'base/mixins';
 
-.generator-input {
-   display: inline-block;
+.input {
    input {
-      border: 1px solid color(border);
-      border-radius: .2em 0 0 .2em;
       padding: .5em 1em;
-      font-weight: 600;
-      color: color(black);
-      width: 5em;
-      border-right: 0;
-      &:focus {outline: none;}
+      border-radius: .2em 0 0 .2em;
    }
    .input-group-append {
       border-radius: 0 .2em .2em 0;
@@ -26,6 +19,17 @@
    }
 }
 
+.input--generator {
+   display: inline-block;
+   input {
+      border: 1px solid color(border);
+      font-weight: 600;
+      color: color(black);
+      width: 5em;
+      border-right: 0;
+   }
+}
+
 label {
    @include spaced-text;
    color: rgba(75, 76, 113, .6);
@@ -36,11 +40,8 @@ label {
 }
 
 input {
-   color: color(black); 
    font-weight: 600;
-   &:focus {
-      outline: none;
-   }
+   &:focus {outline: none;}
    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;

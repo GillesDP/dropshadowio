@@ -15,9 +15,9 @@ function Debug(props) {
          </div>
          <div className={styles.colors}>
             <ul>
-               <li>Shadow :{props.data.colors.shadow.toString()}</li>
-               <li>Box: {props.data.colors.box.toString()}</li>
-               <li>Background: {props.data.colors.background.toString()}</li>
+               <li>Shadow: {props.data.colors.shadow.hex.toString()} - Opacity: {props.data.colors.shadow.rgb.a}</li>
+               <li>Box: {props.data.colors.box.hex.toString()}</li>
+               <li>Background: {props.data.colors.background.hex.toString()}</li>
             </ul>
          </div>
       </div>

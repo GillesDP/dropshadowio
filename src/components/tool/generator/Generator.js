@@ -4,6 +4,7 @@ import Dragger from './Dragger';
 import Input from './Input';
 import Slider from './Slider';
 import Radio from './Radio';
+import ColorPicker from './ColorPicker';
 
 function Generator(props) {
 
@@ -39,11 +40,59 @@ function Generator(props) {
       });
    }
 
+   // Colors
+   const { shadow } = props.data.colors;
+   function setShadow(obj) {
+      props.changeData(prev => {
+         return {...prev, colors: {...prev.colors, shadow: obj}}
+      });
+   }
+   const { box } = props.data.colors;
+   function setBox(obj) {
+      props.changeData(prev => {
+         return {...prev, colors: {...prev.colors, box: obj}}
+      });
+   }
+   const { background } = props.data.colors;
+   function setBackground(obj) {
+      props.changeData(prev => {
+         return {...prev, colors: {...prev.colors, background: obj}}
+      });
+   }
+
+   // Opacity
+   const opacity = props.data.colors.shadow.rgb.a;
+   function setOpacity(num) {
+      props.changeData(prev => {
+         return {
+            ...prev,
+            colors: {
+               ...prev.colors,
+               shadow: {
+                  ...prev.colors.shadow,
+                  rgb: {
+                     ...prev.colors.shadow.rgb,
+                     a: num
+                  },
+                  hsl: {
+                     ...prev.colors.shadow.hsl,
+                     a: num
+                  },
+                  hsv: {
+                     ...prev.colors.shadow.hsv,
+                     a: num
+                  }
+               }
+            }
+         }
+      });
+   }
+
    return (
       <div className="generator">
-         <div className="generator-positioning">
+         <div className="generator__positioning">
             <small>positioning</small>
-            <div className="generator-container">
+            <div className="generator__container">
 
                <Dragger changeOffset={setOffset} offset={offset} />
                <div className="d-block flex-grow-1">
@@ -59,12 +108,23 @@ function Generator(props) {
 
             </div>
          </div>
-         <div className="generator-colors">
+         <div className="generator__colors">
             <small>colors</small>
-            Color selectors
+            <div className="generator__container">
+               <div className="generator__col">
+                  <ColorPicker type="shadow" label="shadow" value={shadow} changeValue={setShadow}/>
+                  <Slider label="opacity" id="opacity" name="opacity" changeValue={setOpacity} value={opacity} center={false} boundries={[0,1]} round={100}/>
+               </div>
+               <div className="generator__col">
+                  <ColorPicker type="background" label="background" value={background} changeValue={setBackground}/>
+               </div>
+               <div className="generator__col">
+                  <ColorPicker type="box" label="box" value={box} changeValue={setBox}/>
+               </div>
+            </div>
          </div>
 
-         <div className="generator-radio">
+         <div className="generator__radio">
             <Radio options={["outset", "inset"]} name="outset" default="outset" value={outset} changeValue={setOutset}></Radio>
          </div>
       </div>

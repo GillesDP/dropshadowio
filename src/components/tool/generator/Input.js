@@ -29,7 +29,7 @@ function Input(props) {
    }
 
    return (
-      <div className="generator-input">
+      <div className="input input--generator">
          <div className="input-group">
             <input 
                type={props.type}

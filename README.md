@@ -17,3 +17,18 @@
 - [x] Slider: False values on click
 - [ ] Slider: Snap box on end of slider (don't go over it)
 - [ ] Make sliders & dragger usable on mobile
+
+# Naming conventions
+**Main class (block)**
+```
+.name
+.two-words
+```
+**Child (element)**
+```
+.name__child
+```
+**Variation (modifier)**
+```
+.name__child--green
+```

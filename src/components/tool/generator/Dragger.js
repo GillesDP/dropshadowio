@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import './css/dragger.scss';
 
 function Dragger(props) {
+   const dragArea = React.createRef();
+   const dragItem = React.createRef();
    let [active, setActive] = useState(false);
    
    let draggerOffset = 16;
-   let transformStyle = {
+   let draggerStyle = {
       transform: `translate(${props.offset.x}px, ${props.offset.y}px)`
    }
 
@@ -22,37 +24,21 @@ function Dragger(props) {
       const mouseCoords = [e.clientX, e.clientY];
 
       if (active) {
-         let t = e.target
-
-         if (t.className === 'drag-area') {
-            // Using the .getBoundingClientRect() I can get an DOMRect obj containing: left, top, right, bottom, x, y, width, height. The positions are relative to the viewport. 
-            let dragArea = t.getBoundingClientRect();
-            let dragger = t.children.dragger;
-   
-            newPosition(dragArea, dragger, mouseCoords);
-         } else if (t.id === 'dragger') {
-            let dragArea = t.parentNode.getBoundingClientRect();
-            let dragger = t;
-
-            newPosition(dragArea, dragger, mouseCoords);
-         }
+         newPosition(mouseCoords);
       }
    }
 
    function handleMouseClick(e) {
       e.preventDefault();
       const mouseCoords = [e.clientX, e.clientY];
-      let t = e.target
-      
-      if (t.className === 'drag-area') {
-         let dragArea = t.getBoundingClientRect();
-         let dragger = t.children.dragger;
 
-         newPosition(dragArea, dragger, mouseCoords);
-      }
+      newPosition(mouseCoords);
    }
 
-   function newPosition(area, item, mouseCoords) {
+   function newPosition(mouseCoords) {
+      let area = dragArea.current.getBoundingClientRect();
+      let item = dragItem.current;
+
       /* Formula:
          - Take mouse x and y coord
          - Substract coords of dragArea relative to client (so that the dragArea now is placed [0, 0])
@@ -76,8 +62,15 @@ function Dragger(props) {
    }
 
    return (
-      <div className="drag-area" onMouseMove={handleMouseMove} onMouseDown={handleMouseDown} onClick={handleMouseClick} onMouseUp={handleMouseUp}>
-         <div id="dragger" style={transformStyle}></div>
+      <div 
+         className="drag-area" 
+         ref={dragArea} 
+         onMouseMove={handleMouseMove} 
+         onMouseDown={handleMouseDown} 
+         onClick={handleMouseClick} 
+         onMouseUp={handleMouseUp}
+      >
+         <div id="dragger" ref={dragItem} style={draggerStyle}></div>
       </div>
    );
 }

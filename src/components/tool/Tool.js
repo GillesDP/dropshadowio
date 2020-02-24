@@ -9,9 +9,9 @@ function Tool() {
       spread: 0,
       outset: true,
       colors: {
-         shadow: "#000000",
-         box: "#391DD5",
-         background: "#FFFFF"
+         shadow: {hex: "#000000", rgb: {r: 0, g: 0, b: 0, a: 1}},
+         box: {hex: "#391DD5", rgb: {r: 152, g: 35, b: 206, a: 1}},
+         background: {hex: "#FFFFFF", rgb: {r: 255, g: 255, b: 255, a: 1}}
       }
    });
 

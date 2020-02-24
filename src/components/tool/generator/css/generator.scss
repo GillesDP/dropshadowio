@@ -12,7 +12,7 @@
       background: #F1F1F3;
       padding: .3em 1em;
       border-bottom: 1px solid color(border);
-      font-size: .9rem;
+      font-size: .8rem;
    }
    legend {
       @include spaced-text;
@@ -21,41 +21,92 @@
    fieldset {
       display: inline-block;
    }
-}
 
-.generator-container {
-   padding: 1.5em;
-   @include max-md {padding: 1em;}
-}
-
-/* Sections */
-.generator-positioning {
-   .generator-container {
+   // Children
+   .generator__container {
+      padding: 1.5em;
+      @include max-md {padding: 1em;}
+   }
+   .generator__container {
       display: flex;
       flex-wrap: wrap;
    }
-   .generator-input {
-      margin-right: 1em;
-   }
-   .slider-input {
-      display: block;
-      margin: 1em 0 1.5em 2em;
-      @include max-md {margin-left: 0;}
-      &:last-of-type {
-         margin-bottom: 0;
+   .generator__col {
+      width: 33%;
+      @include max-sm {
+         width: 100%;
       }
    }
-   fieldset {
-      margin-left: 2em;
-      display: block;
-      @include max-md {margin-left: 0;}
-   }
-}
 
-.generator-radio {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 1em;
-   border-top: 1px solid color(border);
+   .generator__positioning {
+      .generator__container {
+         @include max-sm {padding-bottom: 2em;}
+      }
+      .input--generator {
+         margin-right: 1em;
+      }
+      .slider {
+         display: block;
+         margin: 1em 0 1.5em 2em;
+         @include max-sm {margin-left: 0;}
+         &:last-of-type {
+            margin-bottom: 0;
+         }
+      }
+      fieldset {
+         margin-left: 2em;
+         display: block;
+         @include max-sm {margin-left: 0;}
+      }
+      small {
+         border-top-left-radius: .2em;
+         border-top-right-radius: .2em;
+      }
+   }
+
+   .generator__colors {
+      .generator__col {
+         padding: 0 1.5em;
+         border-right: 1px solid color(border);
+         @include max-sm {
+            padding: 0;
+            border: 0;
+            margin-bottom: 1em;
+         }
+         &:first-of-type {
+            padding-left: 0;
+            @include max-sm {
+               border-bottom: 1px solid color(border);
+               padding-bottom: 1.5em;
+               margin-bottom: 1em;
+            }
+         }
+         &:last-of-type {
+            padding-right: 0;
+            border: 0;
+            margin: 0;
+         }
+      }
+      small {
+         border-top: 1px solid color(border);
+      }
+      .slider {
+         margin-top: 1em;
+         width: 100%;
+      }
+      .input--color-picker {
+         width: 85%;
+         @include max-sm {
+            width: 50%;
+         }
+      }
+   }
+   
+   .generator__radio {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1em;
+      border-top: 1px solid color(border);
+   }
 }

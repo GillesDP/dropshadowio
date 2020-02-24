@@ -4,6 +4,7 @@
 .navbar {
    line-height: 3em;
    border-bottom: 1px solid color(border);
+   @include max-sm {line-height: 2.5em;}
 }
 
 .navbar-toggler {

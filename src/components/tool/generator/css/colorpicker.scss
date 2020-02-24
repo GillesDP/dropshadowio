@@ -1,0 +1,42 @@
+@import 'base/colors';
+
+.input--color-picker {
+   display: inline-block;
+   input {
+      border: 1px solid color(border);
+      font-weight: 600;
+      color: color(black);
+      border-radius: .2em;
+      padding-left: 3em;
+      text-transform: uppercase;
+      width: 100%;
+   }
+   .input-group {
+      position: relative;
+   }
+
+   // Children
+   .input--color-picker__preview {
+      position: absolute;
+      width: 2em;
+      height: 2em;
+      border-radius: .2em;
+      top: calc(50% - 1em);
+      left: 3%;
+      &:hover {
+         cursor: pointer;
+      }
+   }
+}
+
+.chrome-picker, .chrome-picker * {
+   transition: none;
+   input {
+      padding: 0;
+   }
+}
+.chrome-picker {
+   border: 1px solid color(border);
+   box-shadow: none !important;
+   border-radius: .2em !important;
+}

@@ -13,7 +13,7 @@ function Slider(props) {
       transformOrigin: "center center"
    }
    let axisStyle = {
-      width: `${props.center ? exact+200+"px" : exact+"px"}`
+      width: `${props.center ? `calc(${exact}px + 50%)` : exact+"px"}`
    }
    
 
@@ -66,6 +66,12 @@ function Slider(props) {
    /*** Functional ***/
 
    function newPosition(mouseCoords) {
+      // Create variable to round value later on
+      let round;
+      if (!props.round) {
+         round = 1
+      } else round = props.round;
+
       // Define area and (drag)item
       let area = sliderElement.current.getBoundingClientRect();
       let item = document.getElementById(props.id);
@@ -76,7 +82,7 @@ function Slider(props) {
       // If dragger is not centered, draggerOffset should be zero (in order to not conflict with transform)
       if (!props.center) draggerOffset = 0;
       // Calculate the xCoord with formula ( -25 => dragger offset)
-      let xCoord = Math.floor(mouseCoords[0] - area.left - item.offsetLeft - draggerOffset);
+      let xCoord = Math.floor((mouseCoords[0] - area.left - item.offsetLeft - draggerOffset) * round) / round;
 
       // Please note, using exact in props.changeValue won't work. That's why we have a seperate variable to define the incoming value
       let val = checkBorders(xCoord, area);
@@ -85,7 +91,7 @@ function Slider(props) {
       setExact(val);
       
       // Change value by deviding exact position by scale
-      props.changeValue(Math.floor(val / calculateScale(area)));
+      props.changeValue(Math.floor((val / calculateScale(area)) * round) / round);
    }
 
    function checkBorders(value, area) {
@@ -114,15 +120,15 @@ function Slider(props) {
    return (
       <div 
          ref={sliderElement} 
-         className="slider-input" 
+         className="slider" 
          onMouseDown={handleMouseDown} 
          onMouseUp={handleMouseUp} 
          onMouseMove={handleMouseMove} 
          onClick={handleClick}
          >
          <label htmlFor={props.id}> {props.label} </label>
-         <div className="slider-axis" style={props.center ? {justifyContent: "center"} : null}>
-            <div className="slider-range" style={axisStyle}></div>
+         <div className="slider__axis" style={props.center ? {justifyContent: "center"} : null}>
+            <div className="slider__range" style={axisStyle}></div>
             <input 
                id={props.id} 
                value={props.value} 
@@ -141,6 +147,7 @@ PROPS:
    - value: value
    - center: boolean (if true: set 0 to center <-> if false: set 0 to left)
    - boundries: [min, max]
+   - round: num (round number to decimals: 10 -> 0.1, 100 -> 0.01)
 */
 
 export default Slider;
