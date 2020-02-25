@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChromePicker } from 'react-color';
 import './css/colorpicker.scss';
-var { EditableInput } = require('react-color/lib/components/common');
+// var { EditableInput } = require('react-color/lib/components/common');
 
 function ColorPicker(props) {
    const [displayColorPicker, setDisplayColorPicker] = useState(false);
@@ -11,14 +11,14 @@ function ColorPicker(props) {
       zIndex: "3",
       marginTop: ".5em"
    }
-   let editableInputStyle = {
-      input: {
-         zIndex: "1"
-      },
-      label: {
-         display: "none"
-      }
-   }
+   // let editableInputStyle = {
+   //    input: {
+   //       zIndex: "1"
+   //    },
+   //    label: {
+   //       display: "none"
+   //    }
+   // }
 
    function handleClick() {
       if (displayColorPicker !== true) setDisplayColorPicker(true);
@@ -30,14 +30,14 @@ function ColorPicker(props) {
    }
 
    // Form validation for EditableInput
-   function handleChange(obj) {
-      console.log(obj)
-      if (obj.hex.substring(0,1) !== "#") {
-         props.changeValue({hex: "#000000"});
-      } else {
-         props.changeValue(obj);
-      }
-   }
+   // function handleChange(obj) {
+   //    console.log(obj)
+   //    if (obj.hex.substring(0,1) !== "#") {
+   //       props.changeValue({hex: "#000000"});
+   //    } else {
+   //       props.changeValue(obj);
+   //    }
+   // }
 
    return (
       <div className="input input--color-picker">

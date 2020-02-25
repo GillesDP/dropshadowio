@@ -1,0 +1,26 @@
+@import 'base/colors';
+
+.preview--button {
+   height: 220px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   .preview--button__icon {
+      padding: .75em 1em;
+      border-right: 1px solid color(border);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .preview--button__text {
+      padding: .75em 1em;
+   }
+   button {
+      display: flex;
+      &:hover .preview--button__icon svg g circle { stroke-width: 4px; }
+   }
+   .preview--button__icon svg g circle {
+      transition: .2s ease-in-out;
+      stroke-width: 0px;
+   }
+}

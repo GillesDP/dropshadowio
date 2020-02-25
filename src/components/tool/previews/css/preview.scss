@@ -1,0 +1,22 @@
+@import 'base/colors';
+
+.preview {
+   width: 100%;
+   border-radius: .2em;
+   border: 1px solid color(border);
+   position: relative;
+   overflow: hidden;
+   button {
+      border: 0;
+      text-align: center;
+      text-transform: uppercase;
+      border-radius: .2em;
+      font-weight: 600;
+   }
+}
+
+.preview, .preview * {
+   transition: none;
+}
+
+button {padding: 0;}

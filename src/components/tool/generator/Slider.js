@@ -98,7 +98,6 @@ function Slider(props) {
       
       // Change value by deviding exact position by scale
       props.changeValue(Math.floor((val / calculateScale(area)) * round) / round);
-      console.log(val)
    }
 
    function checkBorders(value, area) {
