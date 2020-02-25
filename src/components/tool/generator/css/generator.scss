@@ -25,14 +25,13 @@
    // Children
    .generator__container {
       padding: 1.5em;
-      @include max-md {padding: 1em;}
-   }
-   .generator__container {
       display: flex;
       flex-wrap: wrap;
+      @include max-md {padding: 1em;}
    }
    .generator__col {
-      width: 33%;
+      box-sizing: content-box;
+      width: calc(33% - 2em);
       @include max-sm {
          width: 100%;
       }

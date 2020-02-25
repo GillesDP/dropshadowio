@@ -3,19 +3,27 @@ import './css/slider.scss';
 
 function Slider(props) {
    let sliderElement = React.createRef();
-   let draggerOffset = 25
+   let draggerElement = React.createRef();
+   let draggerOffset = 28;
    const [active, setActive] = useState(false);
    const [exact, setExact] = useState(0);
 
    let transformStyle = {
-      transform: `translate(${props.center ? exact : exact - draggerOffset}px, 0px)`,
+      transform: `translate(${exact}px, 0px)`,
       transition: "none",
       transformOrigin: "center center"
    }
    let axisStyle = {
       width: `${props.center ? `calc(${exact}px + 50%)` : exact+"px"}`
    }
-   
+
+   // Set exact value based on passed value (via props). This function is called when the component is rendered. That way I'm able to reference sliderElement. Second argument is an empty array, meaning it will only execute on first render!
+   React.useEffect(() => {
+      let area = sliderElement.current.getBoundingClientRect()
+      let val = props.value * calculateScale(area);
+      setExact(checkBorders(val, area));
+   }, []);
+
 
    /*** Event ***/
 
@@ -25,7 +33,7 @@ function Slider(props) {
 
    function handleMouseUp() {
       setActive(false)
-   }  
+   }
 
    function handleMouseMove(e) {
       e.preventDefault();
@@ -79,9 +87,7 @@ function Slider(props) {
       // Highlight input text on click
       item.select();
       
-      // If dragger is not centered, draggerOffset should be zero (in order to not conflict with transform)
-      if (!props.center) draggerOffset = 0;
-      // Calculate the xCoord with formula ( -25 => dragger offset)
+      // Calculate the xCoord with formula ( -28 => dragger offset)
       let xCoord = Math.floor((mouseCoords[0] - area.left - item.offsetLeft - draggerOffset) * round) / round;
 
       // Please note, using exact in props.changeValue won't work. That's why we have a seperate variable to define the incoming value
@@ -92,11 +98,12 @@ function Slider(props) {
       
       // Change value by deviding exact position by scale
       props.changeValue(Math.floor((val / calculateScale(area)) * round) / round);
+      console.log(val)
    }
 
    function checkBorders(value, area) {
       // Set borders to area depending on props.center
-      const maxValue = area.width;
+      const maxValue = area.width - draggerOffset*2;
 
       // Returns borders when the value outreaches the maxValue
       if (props.center) {
@@ -112,9 +119,9 @@ function Slider(props) {
    }
 
    function calculateScale(area) {
-      let difference = -props.boundries[0] + props.boundries[1]; // ex. 25
-      let exactWidth = area.width; // ex. 250
-      return (exactWidth / difference); // ex. 10
+      let difference = -props.boundries[0] + props.boundries[1]; // ex. 25, 1
+      let exactWidth = area.width - draggerOffset*2; // ex. 250, 250
+      return (exactWidth / difference); // ex. 10, 250
    }
 
    return (
@@ -130,6 +137,7 @@ function Slider(props) {
          <div className="slider__axis" style={props.center ? {justifyContent: "center"} : null}>
             <div className="slider__range" style={axisStyle}></div>
             <input 
+               ref={draggerElement}
                id={props.id} 
                value={props.value} 
                type="number" 

@@ -61,28 +61,14 @@ function Generator(props) {
    }
 
    // Opacity
-   const opacity = props.data.colors.shadow.rgb.a;
+   const opacity = props.data.colors.opacity;
    function setOpacity(num) {
       props.changeData(prev => {
          return {
             ...prev,
             colors: {
                ...prev.colors,
-               shadow: {
-                  ...prev.colors.shadow,
-                  rgb: {
-                     ...prev.colors.shadow.rgb,
-                     a: num
-                  },
-                  hsl: {
-                     ...prev.colors.shadow.hsl,
-                     a: num
-                  },
-                  hsv: {
-                     ...prev.colors.shadow.hsv,
-                     a: num
-                  }
-               }
+               opacity: num
             }
          }
       });
