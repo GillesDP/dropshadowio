@@ -17,10 +17,13 @@
    }
    button {
       display: flex;
-      &:hover .preview--button__icon svg g circle { stroke-width: 4px; }
+      &:active .preview--button__icon svg g circle { stroke-width: 100vw; }
+   }
+   svg {
+      overflow: visible;
    }
    .preview--button__icon svg g circle {
-      transition: .2s ease-in-out;
+      transition: .5s ease-in-out;
       stroke-width: 0px;
    }
 }

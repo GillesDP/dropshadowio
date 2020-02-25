@@ -1,7 +1,26 @@
+@import 'base/mixins';
+
 .preview--navbar {
    height: 220px;
    .preview--navbar__menu {
-      line-height: 3em;
-      
+      line-height: 4em;
+      padding: 0 1.5em;
+      display: flex;
+      justify-content: space-between;
+   }
+   .preview--navbar__brand {
+      display: inline-block;
+   }
+   .preview--navbar__links {
+      display: flex;
+      .preview--navbar__item {
+         @include spaced-text;
+         letter-spacing: 0;
+         text-transform: uppercase;
+         margin-left: 2em;
+         &:hover {
+            cursor: pointer;
+         }
+      }
    }
 }

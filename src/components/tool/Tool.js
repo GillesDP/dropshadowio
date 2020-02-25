@@ -4,6 +4,7 @@ import Debug from './Debug';
 import ShadowPreview from './previews/ShadowPreview';
 import ButtonPreview from './previews/ButtonPreview';
 import NavbarPreview from './previews/NavbarPreview';
+import PostPreview from './previews/PostPreview';
 
 function Tool() {
    const [data, setData] = useState({
@@ -13,7 +14,7 @@ function Tool() {
       outset: true,
       colors: {
          shadow: {hex: "#000000", rgb: {r: 0, g: 0, b: 0, a: 1}},
-         box: {hex: "#391DD5", rgb: {r: 152, g: 35, b: 206, a: 1}},
+         box: {hex: "#391DD5", rgb: {r: 57, g: 29, b: 213, a: 1}},
          background: {hex: "#FFFFFF", rgb: {r: 255, g: 255, b: 255, a: 1}},
          opacity: .5
       }
@@ -40,9 +41,6 @@ function Tool() {
                   data={data}
                   changeData={(obj) => setData(obj)} 
                />
-               <Debug
-                  data={data}
-               />
             </div>
             <div className="col-lg-4">
                {/* Read only */}
@@ -55,12 +53,12 @@ function Tool() {
                <ButtonPreview data={data} getCode={codeConverter} icon invert={true}>Hit this button</ButtonPreview>
             </div>
             <div className="col-lg-8">
-               <NavbarPreview data={data} getCode={codeConverter}></NavbarPreview>
+               <NavbarPreview data={data} getCode={codeConverter}/>
             </div>
          </div>
          <div className="row">
             <div className="col-lg-8">
-
+               <PostPreview data={data} getCode={codeConverter}/>
             </div>
             <div className="col-lg-4">
                <ButtonPreview data={data} getCode={codeConverter}>Cool right</ButtonPreview>

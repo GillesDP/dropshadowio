@@ -2,8 +2,6 @@ import React from 'react';
 import './css/buttonPreview.scss';
 
 function ButtonPreview(props) {
-
-   // Styles
    let colors = props.data.colors;
    const previewStyle = {
       background: props.invert ? colors.box.hex : colors.background.hex
@@ -25,8 +23,8 @@ function ButtonPreview(props) {
                   <div className="preview--button__icon" style={iconStyle}>
                      <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
                         <g id="Icon" transform="translate(-515 -1321)">
-                           <circle id="Ellipse_3" data-name="Ellipse 3" cx="4.5" cy="4.5" r="4.5" transform="translate(522 1328)" fill={props.invert ? colors.box.hex : colors.background.hex} stroke={props.invert ? colors.box.hex : colors.background.hex}/>
-                           <circle id="Ellipse_4" data-name="Ellipse 4" cx="11.5" cy="11.5" r="11.5" transform="translate(515 1321)" fill={props.invert ? colors.box.hex : colors.background.hex} opacity="0.2"/>
+                           <circle id="Ellipse_3" data-name="Ellipse 3" cx="4.5" cy="4.5" r="4.5" transform="translate(522 1328)" fill={props.invert ? colors.box.hex : colors.background.hex}/>
+                           <circle id="Ellipse_4" data-name="Ellipse 4" cx="11.5" cy="11.5" r="11.5" transform="translate(515 1321)" fill={props.invert ? colors.box.hex : colors.background.hex} stroke={props.invert ? colors.box.hex : colors.background.hex} opacity="0.2"/>
                         </g>
                      </svg>
                   </div> 
