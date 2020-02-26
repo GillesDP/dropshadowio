@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import Generator from './generator/Generator';
-import Debug from './Debug';
 import ShadowPreview from './previews/ShadowPreview';
 import ButtonPreview from './previews/ButtonPreview';
 import NavbarPreview from './previews/NavbarPreview';
 import PostPreview from './previews/PostPreview';
+import './tool.scss';
 
 function Tool() {
    const [data, setData] = useState({
@@ -17,51 +17,60 @@ function Tool() {
          box: {hex: "#391DD5", rgb: {r: 57, g: 29, b: 213, a: 1}},
          background: {hex: "#FFFFFF", rgb: {r: 255, g: 255, b: 255, a: 1}},
          opacity: .5
+      },
+      getCode: function() {
+         let code = `
+            ${this.outset ? "" : "inset"}
+            ${this.offset.x}px 
+            ${this.offset.y}px 
+            ${this.blur}px 
+            ${this.spread}px 
+            rgba(${this.colors.shadow.rgb.r}, ${this.colors.shadow.rgb.g}, ${this.colors.shadow.rgb.b}, ${this.colors.opacity})
+            `;
+         return code
       }
    });
 
-   function codeConverter() {
-      let code = `
-         ${data.outset ? "" : "inset"}
-         ${data.offset.x}px 
-         ${data.offset.y}px 
-         ${data.blur}px 
-         ${data.spread}px 
-         rgba(${data.colors.shadow.rgb.r}, ${data.colors.shadow.rgb.g}, ${data.colors.shadow.rgb.b}, ${data.colors.opacity})
-         `;
-      return code;
-   }
-
    return (
-      <div className="container">
-         <div className="row">
-            <div className="col-lg-8">
-               {/* Read & Change */}
-               <Generator 
-                  data={data}
-                  changeData={(obj) => setData(obj)} 
-               />
-            </div>
-            <div className="col-lg-4">
-               {/* Read only */}
-               <ShadowPreview data={data} getCode={codeConverter}/>
-            </div>
-         </div>
-         <h1>In Use</h1>
-         <div className="row">
-            <div className="col-lg-4">
-               <ButtonPreview data={data} getCode={codeConverter} icon invert={true}>Hit this button</ButtonPreview>
-            </div>
-            <div className="col-lg-8">
-               <NavbarPreview data={data} getCode={codeConverter}/>
+      <div className="tool">
+         <div className="tool__main">
+            <div className="container">
+               <div className="row">
+                  <div className="col-lg-8">
+                     {/* Read & Change */}
+                     <Generator 
+                        data={data}
+                        changeData={(obj) => setData(obj)} 
+                     />
+                  </div>
+                  <div className="col-lg-4">
+                     {/* Read only */}
+                     <ShadowPreview data={data}/>
+                  </div>
+               </div>
             </div>
          </div>
-         <div className="row">
-            <div className="col-lg-8">
-               <PostPreview data={data} getCode={codeConverter}/>
-            </div>
-            <div className="col-lg-4">
-               <ButtonPreview data={data} getCode={codeConverter}>Cool right</ButtonPreview>
+         <div className="tool__use">
+            <div className="container">
+               <div className="row">
+                  <div className="col-lg-8"><h1>In Use</h1></div>
+               </div>
+               <div className="row">
+                  <div className="col-lg-4">
+                     <ButtonPreview data={data} icon invert={true}>Hit this button</ButtonPreview>
+                  </div>
+                  <div className="col-lg-8">
+                     <NavbarPreview data={data}/>
+                  </div>
+               </div>
+               <div className="row">
+                  <div className="col-lg-8">
+                     <PostPreview data={data}/>
+                  </div>
+                  <div className="col-lg-4">
+                     <ButtonPreview data={data}>Cool right</ButtonPreview>
+                  </div>
+               </div>
             </div>
          </div>
       </div>

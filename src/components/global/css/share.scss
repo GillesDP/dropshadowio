@@ -1,0 +1,62 @@
+@import 'base/colors';
+@import 'base/mixins';
+
+.share {
+   background: color(bg);
+   padding: 2em;
+   width: 860px;
+   border-radius: .2em;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   @include max-md {
+      width: 100%;
+      flex-wrap: wrap;
+      padding: 0;
+      justify-content: center;
+   }
+   p {margin: 0;}
+   h1 {
+      margin-bottom: .5em;
+      @include max-md {width: 100%;}
+   }
+   h1, p {
+      margin-left: 2rem; 
+      @include max-md {margin-left: 0;}
+   }
+   .share__text {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      @include max-md {
+         padding: 2em;
+         border: 0;
+         border-bottom: 2px solid color(border);
+         border-style: dashed;
+      }
+      &::before {
+         position: absolute;
+         top: calc(50% - 45px);
+         content: url('../images/Dots1x5.png');
+         @include max-md {
+            content: "";
+         }
+      }
+   }
+   .share__icon {
+      margin-right: 2em;
+      @include max-md {
+         margin: 0;
+      }
+      a {
+         padding: 1.5em 2em;
+         display: block;
+         span {
+            @include spaced-text;
+            color: color(blue);
+            margin-right: 1em;
+         }
+      }
+   }
+}

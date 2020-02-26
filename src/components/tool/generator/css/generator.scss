@@ -4,6 +4,9 @@
 .generator {
    border: 1px solid color(border);
    border-radius: .25em;
+   @include max-sm {
+      margin-bottom: 1em;
+   }
    small {
       @include spaced-text;
       color: color(black);
@@ -25,6 +28,7 @@
    // Children
    .generator__container {
       padding: 1.5em;
+      background: white;
       display: flex;
       flex-wrap: wrap;
       @include max-md {padding: 1em;}
@@ -102,10 +106,22 @@
    }
    
    .generator__radio {
+      background: white;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 1em;
       border-top: 1px solid color(border);
+   }
+}
+
+.generator::after {
+   content: url('../../images/Dots15x8.png');
+   position: absolute;
+   z-index: -1;
+   bottom: -5em;
+   left: -5em;
+   @include max-sm {
+      content: "";
    }
 }

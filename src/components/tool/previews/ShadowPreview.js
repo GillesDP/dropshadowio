@@ -6,7 +6,7 @@ function ShadowPreview(props) {
 
    const styles = {
       background: colors.box.hex,
-      boxShadow: props.getCode()
+      boxShadow: props.data.getCode()
    }
 
    return (

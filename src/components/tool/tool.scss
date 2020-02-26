@@ -1,0 +1,27 @@
+@import 'base/mixins';
+
+.tool {
+   .col-lg-8, .col-lg-4 {
+      padding: 0 .5em;
+      @include max-md {
+         padding: 0 15px;
+      }
+   }
+   .tool__main {
+      display: flex;
+      align-items: center;
+      height: calc(100vh - 5em);
+      background: url('./images/WavesBackground.png') no-repeat;
+      background-size: cover;
+      position: relative;
+      z-index: 1;
+      @include max-md {
+         display: block;
+         padding: 2em 0;
+         height: auto;
+      }
+   }
+   .tool__use {
+      padding: 6em 0;
+   }
+}

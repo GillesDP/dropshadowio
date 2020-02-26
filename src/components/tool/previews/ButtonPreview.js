@@ -9,14 +9,14 @@ function ButtonPreview(props) {
    const buttonStyle = {
       background: props.invert ? colors.background.hex : colors.box.hex,
       color: props.invert ? colors.box.hex : colors.background.hex,
-      boxShadow: props.getCode()
+      boxShadow: props.data.getCode()
    }
    const iconStyle = {
       borderRight: `1px solid rgba(${colors.box.rgb.r}, ${colors.box.rgb.g}, ${colors.box.rgb.b}, .2)`
    }
 
    return (
-      <div className="preview">
+      <div className="preview" style={{margin: ".5em 0"}}>
          <div className="preview--button" style={previewStyle}>
             <button style={buttonStyle}>
                {props.icon ? 

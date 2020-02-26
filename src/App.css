@@ -5,6 +5,7 @@ h1, h2, h3 {
 h1 {
    font-size: 2em;
    font-weight: 600;
+   margin-bottom: 1em;
 }
 p {
    color: var(--mulled-wine);
@@ -13,6 +14,9 @@ small {
    text-transform: uppercase;
    font-weight: 600;
    letter-spacing: 1px;
+}
+hr {
+   color: 1px solid var(--mischka);
 }
 
 /* LINKS */

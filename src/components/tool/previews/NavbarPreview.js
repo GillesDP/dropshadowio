@@ -5,12 +5,11 @@ function NavbarPreview(props) {
    let colors = props.data.colors;
    const menuStyle = {
       background: "white",
-      boxShadow: props.getCode()
+      boxShadow: props.data.getCode()
    }
-   //"rgba(57,29,213,0.25)" 
 
    return (
-      <div className="preview">
+      <div className="preview" style={{margin: ".5em 0"}}>
          <div className="preview--navbar" style={{background: colors.background.hex}}>
             <div className="preview--navbar__menu" style={menuStyle}>
                <div className="preview--navbar__brand">
