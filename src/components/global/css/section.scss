@@ -8,6 +8,7 @@
    }
    p {
       width: 70ch;
+      margin-bottom: 2em;
       @include max-md {
          width: 100%;
       }
@@ -29,4 +30,8 @@
          margin: 0;
       }
    }
+}
+
+.privacy-policy {
+   background: color(bg);
 }

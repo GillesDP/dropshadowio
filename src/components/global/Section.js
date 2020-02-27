@@ -5,11 +5,13 @@ function Section(props) {
    return (
       <div className={`section${props.className ? " " + props.className : ""}`}>
          <div className="container">
-            <div className="row">
-               <div className="col">
-                  <h1>{props.title}</h1>
+            {props.title ? 
+               <div className="row">
+                  <div className="col">
+                     <h1>{props.title}</h1>
+                  </div>
                </div>
-            </div>
+            :null}
             {props.children}
          </div>
       </div>
@@ -18,8 +20,8 @@ function Section(props) {
 
 /*
 PROPS:
-   - className: string
-   - title: string
+   - className: string (optional)
+   - title: string (optional)
 */
 
 export default Section;

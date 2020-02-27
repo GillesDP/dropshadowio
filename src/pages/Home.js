@@ -14,10 +14,9 @@ function Home() {
          <hr/>
 
          <Section title="How To Use">
-            <p>Using gradients in css is very simple and only requires a few lines of code. You can use both inline or external css to apply the styles.</p>
+            <p>Using gradients in css is very simple and only requires a few lines of code. You can use both inline or external css to apply the styles. The prefix -webkit- is added in order to support older browsers.</p>
             <p style={{marginBottom: "2em"}}>
-               <b>Note:</b> This is a demo, please copy your code above first by clicking the copy button.<br/>
-               <b>Note:</b> -webkit- is added to support older browsers.
+               <b>Note:</b> This is a demo, please use your own shadow by clicking the copy button.<br/>
             </p>
             <div className="row">
                <div className="col-lg-6" style={{marginBottom: "1em"}}>

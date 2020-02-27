@@ -1,0 +1,61 @@
+@import 'base/colors';
+@import 'base/mixins';
+
+.collapsible {
+   background: white;
+   margin-bottom: 1em;
+   button {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: color(black);
+      padding: 1.5rem;
+      background: inherit;
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      svg {
+         transition: .2s ease-in-out;
+      }
+   }
+   ul {
+      margin: 1em 0;
+      li {
+         padding-left: 1.5em;
+         position: relative;
+         margin: .5em;
+         color: color(text);
+         &::before {
+            content: "\2022";
+            font-size: 1.5em;
+            position: absolute;
+            top: -.25em;
+            left: 0;
+            color: color(blue);
+         }
+      }
+   }
+
+   .collapsible__heading button {
+      text-transform: capitalize;
+   }
+   .collapsible__content {
+      overflow: hidden;
+      transition: max-height .2s ease-in-out;
+      padding: 0 1.5rem;
+      max-height: 0;
+      p {
+         margin: 0;
+      }
+   }
+   .collapsible__underline {
+      font-weight: 600;
+      color: color(blue);
+      border-bottom: 2px dashed color(blue);
+   }
+   .collapsible__text {
+      padding-bottom: 1em;
+   }
+}

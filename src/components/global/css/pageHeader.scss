@@ -1,0 +1,30 @@
+@import 'base/colors';
+@import 'base/mixins';
+
+.page-header {
+   padding: 6em 0;
+   .page-header__category {
+      @include spaced-text;
+      font-weight: 600;
+      color: color(text);
+      opacity: .6;
+      margin-bottom: -.25em;
+   }
+   .page-header__title {
+      text-transform: capitalize;
+      h1 {
+         margin: 0;
+         font-size: 3em;
+      }
+   }
+   .page-header__updated {
+      display: inline-block;
+      border-bottom: 2px dashed color(border);
+      color: color(text);
+      margin-top: 1em;
+      .page-header__date {
+         font-weight: 600;
+         color: color(blue);
+      }
+   }
+}
