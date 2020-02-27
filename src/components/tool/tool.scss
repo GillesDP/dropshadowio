@@ -1,6 +1,11 @@
 @import 'base/mixins';
 
 .tool {
+   background: url('./images/WavesBackground.png') no-repeat;
+   background-size: contain;
+   @include max-md {
+      background: none;
+   }
    .col-lg-8, .col-lg-4 {
       padding: 0 .5em;
       @include max-md {
@@ -8,11 +13,8 @@
       }
    }
    .tool__main {
-      display: flex;
-      align-items: center;
+      padding-top: 4em;
       height: calc(100vh - 5em);
-      background: url('./images/WavesBackground.png') no-repeat;
-      background-size: cover;
       position: relative;
       z-index: 1;
       @include max-md {
@@ -23,5 +25,8 @@
    }
    .tool__use {
       padding: 6em 0;
+   }
+   .code-block {
+      margin-top: 1em;
    }
 }

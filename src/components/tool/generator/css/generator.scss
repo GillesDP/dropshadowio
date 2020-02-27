@@ -15,7 +15,7 @@
       background: #F1F1F3;
       padding: .3em 1em;
       border-bottom: 1px solid color(border);
-      font-size: .8rem;
+      font-size: .9rem;
    }
    legend {
       @include spaced-text;
@@ -112,6 +112,8 @@
       justify-content: center;
       padding: 1em;
       border-top: 1px solid color(border);
+      border-bottom-left-radius: .2em;
+      border-bottom-right-radius: .2em;
    }
 }
 

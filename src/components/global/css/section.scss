@@ -1,0 +1,32 @@
+@import 'base/colors';
+@import 'base/mixins';
+
+.section {
+   padding: 6em 0;
+   @include max-md {
+      padding: 4em 0;
+   }
+   p {
+      width: 70ch;
+      @include max-md {
+         width: 100%;
+      }
+   }
+}
+
+.about {
+   background: color(bg);
+   h2 {
+      @include spaced-text;
+      color: color(blue);
+      font-size: 1rem;
+      margin-bottom: .25em;
+   }
+   p {
+      width: auto;
+      margin-bottom: 2em;
+      &:last-of-type {
+         margin: 0;
+      }
+   }
+}

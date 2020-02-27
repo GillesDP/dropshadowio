@@ -2,7 +2,6 @@ html {font-size: 16px; scroll-behavior: smooth;}
 body {position: relative;}
 img {pointer-events: none;}
 * {
-   transition: .2s;
    font-family: 'work sans', sans-serif;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;

@@ -4,6 +4,7 @@ import ShadowPreview from './previews/ShadowPreview';
 import ButtonPreview from './previews/ButtonPreview';
 import NavbarPreview from './previews/NavbarPreview';
 import PostPreview from './previews/PostPreview';
+import CodeBlock from '../global/CodeBlock';
 import './tool.scss';
 
 function Tool() {
@@ -19,14 +20,7 @@ function Tool() {
          opacity: .5
       },
       getCode: function() {
-         let code = `
-            ${this.outset ? "" : "inset"}
-            ${this.offset.x}px 
-            ${this.offset.y}px 
-            ${this.blur}px 
-            ${this.spread}px 
-            rgba(${this.colors.shadow.rgb.r}, ${this.colors.shadow.rgb.g}, ${this.colors.shadow.rgb.b}, ${this.colors.opacity})
-            `;
+         let code = `${this.outset ? "" : "inset"} ${this.offset.x}px ${this.offset.y}px ${this.blur}px ${this.spread}px rgba(${this.colors.shadow.rgb.r}, ${this.colors.shadow.rgb.g}, ${this.colors.shadow.rgb.b}, ${this.colors.opacity})`;
          return code
       }
    });
@@ -46,6 +40,12 @@ function Tool() {
                   <div className="col-lg-4">
                      {/* Read only */}
                      <ShadowPreview data={data}/>
+                     <CodeBlock language="css" title="css" theme="dark" copy="true">
+                        <span className="css-property">box-shadow</span>
+                        <span className="css-value">: {data.getCode()};</span><br/>
+                        <span className="css-property">-webkit-box-shadow</span>
+                        <span className="css-value">: {data.getCode()};</span>
+                     </CodeBlock>
                   </div>
                </div>
             </div>

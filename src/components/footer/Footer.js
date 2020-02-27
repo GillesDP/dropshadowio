@@ -33,7 +33,7 @@ function Footer() {
                </div>
                <div className="col-lg-4 order-1 order-md-4">
                   <ul>
-                     <li>Subscribe To Our Newsletter</li>
+                     <li>Subscribe To My Newsletter</li>
                      <li>
                         <Subscribe />
                      </li>

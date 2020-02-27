@@ -5,7 +5,6 @@
    background: color(bg);
    padding: 2em;
    width: 860px;
-   border-radius: .2em;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -45,10 +44,6 @@
       }
    }
    .share__icon {
-      margin-right: 2em;
-      @include max-md {
-         margin: 0;
-      }
       a {
          padding: 1.5em 2em;
          display: block;

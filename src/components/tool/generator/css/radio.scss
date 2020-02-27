@@ -28,8 +28,14 @@
       padding: .5em 1em;
       margin: 0;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       &:hover {
          cursor: pointer;
+      }
+      svg {
+         margin-right: .5em;
       }
    }
    input {
@@ -47,4 +53,8 @@
 
 button:focus {
    outline: 0;
+}
+
+label * {
+   transition: 0;
 }

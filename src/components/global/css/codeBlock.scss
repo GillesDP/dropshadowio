@@ -1,0 +1,85 @@
+@import 'base/colors';
+@import 'base/mixins';
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap');
+
+.code-block {
+   background: color(bg);
+   .code-block__title {
+      @include spaced-text;
+      padding: .5em 1em 0 1em;
+      font-size: .9rem;
+      opacity: .6;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+   }
+   .code-block__code {
+      padding: .5em 1em 1em 1em;
+   }
+   .code-block__copy {
+      display: block;
+      button {
+         @include spaced-text;
+         color: white;
+         background: color(blue);
+         width: 100%;
+         text-align: center;
+         padding: .5em 0;
+         border-bottom-left-radius: .2em;
+         border-bottom-right-radius: .2em;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         svg {
+            margin-right: .5em;
+         }
+      }
+   }
+
+   .tab {
+      padding-left: 1em;
+   }
+   pre {
+      margin: 0;
+      white-space: pre-line;
+   }
+   span {
+      font-family: 'Roboto Mono', Monaco, courier, monospace;
+      font-size: .9rem;
+   }
+}
+
+.code-block--dark {
+   border-radius: .2em;
+   background: color(black);
+   .code-block__title {
+      color: white;
+   }
+   .css-property {
+      color: color(green);
+   }
+   span {
+      color: white;
+   }
+}
+.code-block--white {
+   background: white;
+}
+
+// Code specific
+.code-block {
+   .css-selector {
+      font-weight: bold;
+      color: color(blue);
+   }
+   .css-property {
+      font-weight: bold;
+   }
+   .html-tag {
+      font-weight: bold;
+   }
+   .html-id {
+      color: color(blue);
+   }
+}
