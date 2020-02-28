@@ -3,6 +3,8 @@
 
 .section {
    padding: 6em 0;
+   position: relative;
+   z-index: 1;
    @include max-md {
       padding: 4em 0;
    }
@@ -13,16 +15,28 @@
          width: 100%;
       }
    }
-}
-
-.about {
-   background: color(bg);
    h2 {
       @include spaced-text;
       color: color(blue);
       font-size: 1rem;
       margin-bottom: .25em;
    }
+   a {
+      font-weight: 600;
+      border-bottom: 2px dashed color(black);
+      color: black;
+      &:hover {
+         border-color: color(blue);
+         color: color(blue);
+      }
+   }
+}
+.section--gray {
+   background: color(bg);
+   background: color(bg);
+}
+
+.about {
    p {
       width: auto;
       margin-bottom: 2em;
@@ -32,6 +46,34 @@
    }
 }
 
-.privacy-policy {
-   background: color(bg);
+.contact-cta {
+   border-top: 1px solid color(border);
+   background: rgb(241,241,243);
+   background: linear-gradient(180deg, rgba(241,241,243,1) 0%, rgba(255,255,255,0) 75%);
+   h1 {
+      font-size: 3em;
+      text-transform: capitalize;
+      margin-bottom: .5em;
+   }
+   h2 {
+      text-transform: unset;
+      letter-spacing: 0;
+   }
+   .button {
+      margin-right: 1em;
+      @include max-sm {
+         margin-right: 4%;
+         width: 48%;
+      }
+      @include max-xs {
+         width: 100%;
+         margin-bottom: 1em;
+         &:last-of-type {
+            margin-bottom: 0;
+         }
+      }
+      &:last-of-type {
+         margin-right: 0;
+      }
+   }
 }

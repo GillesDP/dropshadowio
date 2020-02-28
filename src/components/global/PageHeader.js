@@ -8,7 +8,7 @@ function PageHeader(props) {
             <div className="row">
                <div className="col">
                   <div className="page-header__category">{props.category}</div>
-                  <div className="page-header__title"><h1>{props.children}</h1></div>
+                  <div className={`page-header__title${props.dots ? " page-header--dots" : ""}`}><h1>{props.children}</h1></div>
                   {props.pageUpdate ? 
                      <div className="page-header__updated">Last Updated <span className="page-header__date">{props.pageUpdate}</span></div>
                   : null}

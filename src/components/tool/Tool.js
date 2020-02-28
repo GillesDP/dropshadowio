@@ -57,7 +57,7 @@ function Tool() {
                </div>
                <div className="row">
                   <div className="col-lg-4">
-                     <ButtonPreview data={data} icon invert={true}>Hit this button</ButtonPreview>
+                     <ButtonPreview data={data} icon invert>Hit this button</ButtonPreview>
                   </div>
                   <div className="col-lg-8">
                      <NavbarPreview data={data}/>

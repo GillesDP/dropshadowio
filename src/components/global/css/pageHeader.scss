@@ -3,15 +3,20 @@
 
 .page-header {
    padding: 6em 0;
+   overflow-x: hidden;
    .page-header__category {
       @include spaced-text;
       font-weight: 600;
       color: color(text);
       opacity: .6;
       margin-bottom: -.25em;
+      display: block;
    }
    .page-header__title {
       text-transform: capitalize;
+      display: block;
+      position: relative;
+      z-index: 1;
       h1 {
          margin: 0;
          font-size: 3em;
@@ -25,6 +30,20 @@
       .page-header__date {
          font-weight: 600;
          color: color(blue);
+      }
+   }
+}
+.page-header--dots {
+   &::after {
+      content: url('../images/Dots8x5.png');
+      width: 94px;
+      position: absolute;
+      z-index: -1;
+      right: 50%;
+      top: 0;
+      @include max-md {
+         right: -5%;
+         top: 5%;
       }
    }
 }

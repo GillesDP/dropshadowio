@@ -20,14 +20,14 @@ function Home() {
             </p>
             <div className="row">
                <div className="col-lg-6" style={{marginBottom: "1em"}}>
-                  <CodeBlock title="html">
+                  <CodeBlock language="html">
                      <span className="html-tag">&lt;div id="<span className="html-id">demo</span>"&gt;</span><br/>
                      <span className="tab">Hello World</span><br/>
                      <span className="html-tag">&lt;/div&gt;</span>
                   </CodeBlock>
                </div>
                <div className="col-lg-6">
-                  <CodeBlock title="css">
+                  <CodeBlock language="css">
                      <span className="css-selector">#demo</span> &#123;<br/>
                      <span className="css-property tab">box-shadow: </span> 
                      <span className="css-value">12px 20px 25px 0px rgba(0,0,0,0.2);</span><br/>
@@ -39,7 +39,7 @@ function Home() {
             </div>
          </Section>
 
-         <Section className="about" title="About Dropshadow.io">
+         <Section className="about" title="About Dropshadow.io" background="gray">
             <div className="row">
                <div className="col-lg-6">
                   <h2>History</h2>

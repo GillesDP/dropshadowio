@@ -1,0 +1,19 @@
+@import 'base/colors';
+@import 'base/mixins';
+
+.button {
+   @include spaced-text;
+   background: none;
+   padding: .8em 2.4em;
+   border-radius: .2em;
+   font-size: .9em;
+   border: 1px solid transparent;
+}
+.button--blue {
+   background: color(blue);
+   color: white;
+}
+.button--border {
+   border: 1px solid color(border);
+   color: color(text);
+}

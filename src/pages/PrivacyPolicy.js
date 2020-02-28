@@ -7,7 +7,7 @@ function PrivacyPolicy() {
    return(
       <React.Fragment>
          <PageHeader category="legal" pageUpdate="27th February 2020">Privacy Policy</PageHeader>
-         <Section className="privacy-policy">
+         <Section className="privacy-policy" background="gray">
             <div className="row">
                <div className="col-lg-8">
                   <p style={{marginBottom: "2em"}}>Your privacy is important to us. It is Dropshadow.io’s policy to respect your privacy regarding any information we may collect from you across our website, and other sites we own and operate. We only ask for personal information when we truly need it to provide a service to you.</p>

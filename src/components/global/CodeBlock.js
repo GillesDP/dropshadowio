@@ -29,7 +29,7 @@ function CodeBlock(props) {
    return (
       <div className={`code-block${props.theme === "dark" ? " code-block--dark" : props.theme === "white" ? " code-block--white" : ""}`}>
          <div className="code-block__title">
-            {props.title}
+            {props.language}
          </div>
          <div ref={codeRef} className="code-block__code">
             <pre>
@@ -57,7 +57,6 @@ function CodeBlock(props) {
 
 /*
 PROPS:
-   - title: string
    - theme: string
    - language: string (html/css)
    - copy: boolean (active copy button)
