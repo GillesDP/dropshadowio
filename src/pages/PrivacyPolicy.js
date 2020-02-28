@@ -4,7 +4,11 @@ import Section from "../components/global/Section";
 import PageHeader from "../components/global/PageHeader";
 
 function PrivacyPolicy() {
-   return(
+   React.useEffect(() => {
+      document.title = "Dropshadow.io | Privacy Policy";
+   }, []);
+
+   return (
       <React.Fragment>
          <PageHeader category="legal" pageUpdate="27th February 2020">Privacy Policy</PageHeader>
          <Section className="privacy-policy" background="gray">

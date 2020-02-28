@@ -6,6 +6,10 @@ import CodeBlock from "../components/global/CodeBlock";
 import Button from "../components/global/Button";
 
 function HowToUse() {
+   React.useEffect(() => {
+      document.title = "Dropshadow.io | How To Use";
+   }, []);
+
    // Web
    const webArticles = [
       {

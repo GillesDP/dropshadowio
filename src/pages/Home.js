@@ -5,6 +5,10 @@ import CodeBlock from "../components/global/CodeBlock";
 import Section from "../components/global/Section";
 
 function Home() {
+   React.useEffect(() => {
+      document.title = "Dropshadow.io";
+   }, []);
+
    return (
       <React.Fragment>
          <Tool/>

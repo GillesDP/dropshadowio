@@ -49,7 +49,7 @@ function CodeBlock(props) {
                         <path id="Subtraction_2" data-name="Subtraction 2" d="M10,14.323H0v-12H6.452L10,5.83v8.493Z" transform="translate(1332 761.677)" fill="#fff" opacity="0.2"/>
                      </g>
                   </svg>
-                  {copySuccess ? "copied" : "copy"}
+                  <div className="code-block__copy__text">{copySuccess ? "copied" : "copy"}</div>
                </button>
             </div> 
          : null}

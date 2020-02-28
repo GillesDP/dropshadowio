@@ -17,6 +17,9 @@
       }
    }
 }
+.nav-link--disabled:hover {
+   cursor: not-allowed;
+}
 
 .navbar-expand-lg .navbar-nav {
    a {width: 100%;}

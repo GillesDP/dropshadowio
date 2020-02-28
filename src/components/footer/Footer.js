@@ -13,7 +13,7 @@ function Footer() {
                   <ul>
                      <li>Sitemap</li>
                      <li><Link to="/">Home</Link></li>
-                     <li><Link to="/presets">Presets</Link></li>
+                     <li><Link to="/presets" onClick={e => e.preventDefault()} className="nav-link--disabled">Presets</Link></li>
                      <li><Link to="/how-to-use">How To Use</Link></li>
                   </ul>
                </div>

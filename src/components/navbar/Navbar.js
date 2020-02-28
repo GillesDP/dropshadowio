@@ -15,7 +15,7 @@ function Navbar() {
 
             <div className="collapse navbar-collapse" id="navbarMenu">
                <ul className="navbar-nav ml-auto">
-                  <Navlink link="/presets" content="presets" key={1}/>
+                  <Navlink link="/presets" content="presets" key={1} disabled/>
                   <Navlink link="/how-to-use" content="how to use" key={2}/>
                </ul>
             </div>
