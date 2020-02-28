@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="351" height="128" viewBox="0 0 351 128">
+  <defs>
+    <filter id="Rectangle_120" x="0" y="11" width="308" height="117" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feFlood flood-opacity="0.4"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_46" data-name="Group 46" transform="translate(-51 -621)">
+    <g transform="matrix(1, 0, 0, 1, 51, 621)" filter="url(#Rectangle_120)">
+      <rect id="Rectangle_120-2" data-name="Rectangle 120" width="254" height="63" transform="translate(27 32)" fill="#1dd59c"/>
+    </g>
+    <g id="Create_Box_Img" data-name="Create Box Img" transform="translate(-733 -1502)">
+      <g id="Rectangle_70" data-name="Rectangle 70" transform="translate(858 2126)" fill="#eb4e6c" stroke="#1e1f4d" stroke-width="1" stroke-dasharray="5">
+        <rect width="254" height="63" stroke="none"/>
+        <rect x="0.5" y="0.5" width="253" height="62" fill="none"/>
+      </g>
+      <g id="Group_11" data-name="Group 11" transform="translate(26 -16)">
+        <g id="Group_10" data-name="Group 10">
+          <g id="Rectangle_72" data-name="Rectangle 72" transform="translate(1098 2219)" fill="none" stroke="#1e1f4d" stroke-width="1">
+            <rect width="11" height="11" stroke="none"/>
+            <rect x="0.5" y="0.5" width="10" height="10" fill="none"/>
+          </g>
+          <line id="Line_27" data-name="Line 27" y2="3.519" transform="translate(1093.808 2210.117)" fill="none" stroke="#1e1f4d" stroke-width="1"/>
+          <line id="Line_30" data-name="Line 30" y2="3.519" transform="translate(1093.808 2215.981)" fill="none" stroke="#1e1f4d" stroke-width="1"/>
+          <line id="Line_28" data-name="Line 28" x1="3.519" transform="translate(1094.981 2214.808)" fill="none" stroke="#1e1f4d" stroke-width="1"/>
+          <line id="Line_29" data-name="Line 29" x1="3.519" transform="translate(1089.117 2214.808)" fill="none" stroke="#1e1f4d" stroke-width="1"/>
+        </g>
+      </g>
+      <circle id="Ellipse_8" data-name="Ellipse 8" cx="3" cy="3" r="3" transform="translate(855 2123)" fill="#1e1f4d"/>
+      <circle id="Ellipse_9" data-name="Ellipse 9" cx="3" cy="3" r="3" transform="translate(855 2186)" fill="#1e1f4d"/>
+      <circle id="Ellipse_10" data-name="Ellipse 10" cx="3" cy="3" r="3" transform="translate(1109 2186)" fill="#1e1f4d"/>
+      <circle id="Ellipse_11" data-name="Ellipse 11" cx="3" cy="3" r="3" transform="translate(1109 2123)" fill="#1e1f4d"/>
+    </g>
+  </g>
+</svg>

@@ -4,6 +4,10 @@
 .article-controller {
    display: flex;
    justify-content: space-between;
+   padding-top: 2em;
+   @include max-md {
+      padding-top: 0;
+   }
    .article-controller__nav {
       border-left-style: solid;
       border-left-color: transparent;
@@ -24,6 +28,7 @@
 }
 
 button.article-nav__link {
+   text-align: left;
    background: none;
    padding: .25em 0;
    display: block;
@@ -60,6 +65,17 @@ button.article-nav__link--active {
       width: 100%;
       margin-bottom: 0;
    }
+   img {
+      background: white;
+      max-width: 100%;
+      padding: 4em;
+      margin: 1em 0;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+   }
    .article__index {
       font-family: 'Roboto Mono', Monaco, courier, monospace;
       font-size: 3em;
@@ -74,18 +90,20 @@ button.article-nav__link--active {
       -ms-user-select: none;
       user-select: none;  
       @include max-md {
-         top: -.8em;
+         top: -.9em;
          right: .25em;
       }
    }
    .article__title {
       text-transform: capitalize;
    }
-   .code-block {
-      margin: 1em 0;
-      &:last-of-type {
+   .article__content {
+      *:last-child {
          margin-bottom: 0;
       }
+   }
+   .code-block {
+      margin: 1em 0;
    }
 }
 .article--gray {

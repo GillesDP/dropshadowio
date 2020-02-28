@@ -8,12 +8,28 @@
    border-radius: .2em;
    font-size: .9em;
    border: 1px solid transparent;
+   transition: .2s;
+   a {
+      transition: 0;
+      border: 0;
+      color: inherit;
+      &:hover {
+         border: 0;
+         color: inherit;
+      }
+   }
 }
 .button--blue {
    background: color(blue);
    color: white;
+   &:hover {
+      opacity: .9;
+   }
 }
 .button--border {
    border: 1px solid color(border);
    color: color(text);
+   &:hover {
+      color: color(black);
+   }
 }

@@ -40,9 +40,16 @@
    .tab {
       padding-left: 1em;
    }
+   code {
+      background: none;
+      padding: 0;
+      color: color(black);
+   }
    pre {
       margin: 0;
       white-space: pre-line;
+      color: color(black);
+      height: auto;
    }
    span {
       font-family: 'Roboto Mono', Monaco, courier, monospace;
@@ -82,4 +89,10 @@
    .html-id {
       color: color(blue);
    }
+}
+
+code {
+   background: color(bg);
+   padding: .25em .5em;
+   color: color(black);
 }

@@ -7,6 +7,7 @@ import HowToUse from './pages/HowToUse';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfUse from './pages/TermsOfUse'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import ScrollToTop from './pages/ScrollToTop';
 import './App.css';
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
       <Router>
          <React.Fragment>
             <Navbar/>
-
+            
+            <ScrollToTop/>
             <Switch>
                <Route exact path="/" component={Home}/>
                <Route path="/index" component={Home}/>

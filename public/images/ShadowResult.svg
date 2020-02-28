@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="308" height="117" viewBox="0 0 308 117">
+  <defs>
+    <filter id="Rectangle_70" x="0" y="0" width="308" height="117" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feFlood flood-opacity="0.4"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Improve_Shadow" data-name="Improve Shadow" transform="translate(-47 -454)">
+    <g transform="matrix(1, 0, 0, 1, 47, 454)" filter="url(#Rectangle_70)">
+      <rect id="Rectangle_70-2" data-name="Rectangle 70" width="254" height="63" transform="translate(27 21)" fill="#1dd59c"/>
+    </g>
+    <rect id="Rectangle_118" data-name="Rectangle 118" width="290" height="69" transform="translate(56 472)" fill="#eb4e6c"/>
+  </g>
+</svg>

@@ -28,10 +28,12 @@ function CodeBlock(props) {
 
    return (
       <div className={`code-block${props.theme === "dark" ? " code-block--dark" : props.theme === "white" ? " code-block--white" : ""}`}>
-         <div className="code-block__title">
-            {props.language}
-         </div>
-         <div ref={codeRef} className="code-block__code">
+         {props.language ? 
+            <div className="code-block__title">
+               {props.language}
+            </div>
+         : null}
+         <div ref={codeRef} className="code-block__code" style={!props.language ? {paddingTop: "1em"} : {}}>
             <pre>
                <code className={"language-"+ props.language}>
                   {props.children}

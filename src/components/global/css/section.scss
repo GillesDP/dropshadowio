@@ -25,7 +25,9 @@
       font-weight: 600;
       border-bottom: 2px dashed color(black);
       color: black;
+      transition: .2s;
       &:hover {
+         border-bottom: 2px solid color(black);
          border-color: color(blue);
          color: color(blue);
       }
