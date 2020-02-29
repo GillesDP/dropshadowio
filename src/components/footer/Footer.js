@@ -1,6 +1,5 @@
 import React from 'react';
 import Credits from './Credits';
-import Subscribe from './Subscribe';
 import { Link } from 'react-router-dom';
 import './css/footer.scss';
 
@@ -21,7 +20,7 @@ function Footer() {
                   <ul>
                      <li>Legal</li>
                      <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-                     <li><Link to="/terms-of-use">Terms Of Use</Link></li>
+                     {/* <li><Link to="/terms-of-use">Terms Of Use</Link></li> */}
                   </ul>
                </div>
                <div className="col order-3">
@@ -32,12 +31,12 @@ function Footer() {
                   </ul>
                </div>
                <div className="col-lg-4 order-1 order-md-4">
-                  <ul>
+                  {/* <ul>
                      <li>Subscribe To My Newsletter</li>
                      <li>
                         <Subscribe />
                      </li>
-                  </ul>
+                  </ul> */}
                </div>
             </div>
 

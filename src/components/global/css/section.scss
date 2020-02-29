@@ -46,6 +46,25 @@
          margin: 0;
       }
    }
+   .about__images {
+      display: flex;
+      justify-content: center;
+      margin-right: -5em;
+   }
+   img {
+      border-radius: .2em;
+      object-fit: cover;
+      width: 220px;
+      height: 220px;
+      box-shadow: 0 .75em 2em -1em rgba(30, 31, 77, 0.5);
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      position: relative;
+      @include max-md {
+         display: none;
+      }
+   }
 }
 
 .contact-cta {

@@ -4,7 +4,7 @@ import './css/brand.scss';
 
 function Brand() {
    return (
-      <Link className="navbar-brand" to="/">dropshadow.io</Link>
+      <Link className="navbar-brand" to="/"><img src="./images/DropshadowIoLogo.svg" alt="Dropshadow.io logo"/> dropshadow.io</Link>
    );
 }
 

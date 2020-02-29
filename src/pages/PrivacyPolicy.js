@@ -1,9 +1,11 @@
 import React from "react";
+import ReactGA from "react-ga";
 import Collapsible from "../components/global/Collapsible";
 import Section from "../components/global/Section";
 import PageHeader from "../components/global/PageHeader";
 
 function PrivacyPolicy() {
+   ReactGA.pageview(window.location.pathname);
    React.useEffect(() => {
       document.title = "Dropshadow.io | Privacy Policy";
    }, []);

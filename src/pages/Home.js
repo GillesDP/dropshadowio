@@ -1,10 +1,12 @@
 import React from "react";
+import ReactGA from "react-ga";
 import Tool from "../components/tool/Tool";
 import Share from "../components/global/Share";
 import CodeBlock from "../components/global/CodeBlock";
 import Section from "../components/global/Section";
 
 function Home() {
+   ReactGA.pageview(window.location.pathname);
    React.useEffect(() => {
       document.title = "Dropshadow.io";
    }, []);
@@ -47,9 +49,15 @@ function Home() {
             <div className="row">
                <div className="col-lg-6">
                   <h2>History</h2>
-                  <p>It all started on the most ordinary day at the most usual time. For some reason, I needed a way to generate drop shadows quickly. After Googling for a while I could not find any great tool that wasn’t based on regular sliders or had poor design choices. That’s when I decided to create something fresh, with user usability in mind.</p>
+                  <p>It all started on the most ordinary day at the most usual time. I needed a way to generate drop shadows quickly. After Googling for a while I could not find any tool that wasn’t based on regular sliders or had poor design choices. That’s when I decided to create something fresh, with user usability in mind.</p>
                   <h2>The goal</h2>
-                  <p>The goal has been clear since the very beginning; Offering front-end developers and designers a user-friendly and attractive tool to create their drop shadows.</p>
+                  <p>The goal has been clear since the very beginning; Offering front-end developers and designers a user-friendly and attractive tool to create their drop shadows. </p>
+               </div>
+               <div className="col-lg-6">
+                  <div className="about__images">
+                     <img src="./images/SketchOne.jpg" alt="The process" style={{top: "-3em"}}/>
+                     <img src="./images/Me.jpg" alt="That's me" style={{left: "-3em", top: "2em"}}/>
+                  </div>
                </div>
             </div>
          </Section>

@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import PageHeader from "../components/global/PageHeader";
 import Section from "../components/global/Section";
 import ArticleController from "../components/article/ArticleController";
@@ -6,6 +7,7 @@ import CodeBlock from "../components/global/CodeBlock";
 import Button from "../components/global/Button";
 
 function HowToUse() {
+   ReactGA.pageview(window.location.pathname);
    React.useEffect(() => {
       document.title = "Dropshadow.io | How To Use";
    }, []);
@@ -47,9 +49,9 @@ function HowToUse() {
                <CodeBlock language="css">
                   <span className="css-selector">#demo</span> &#123;<br/>
                   <span className="css-property tab">box-shadow: </span> 
-                  <span className="css-value">12px 20px 25px 0px rgba(0,0,0,0.4);</span><br/>
+                  <span className="css-value">0px 18px 18px -12px rgba(0,0,0,0.3);</span><br/>
                   <span className="css-property tab">-webkit-box-shadow: </span> 
-                  <span className="css-value">12px 20px 25px 0px rgba(0,0,0,0.4);</span><br/>
+                  <span className="css-value">0px 18px 18px -12px rgba(0,0,0,0.3);</span><br/>
                   &#125;
                </CodeBlock>
                <p>Now comes the fun part. Play around with the css values!</p>
@@ -70,13 +72,13 @@ function HowToUse() {
                <CodeBlock language="css">
                   <span className="css-selector">#demo</span> &#123;<br/>
                   <span className="css-property tab">box-shadow: </span> 
-                  <span className="css-value">12px 20px 25px 0px rgba(0,0,0,0.4);</span><br/>
+                  <span className="css-value">0px 18px 18px -12px rgba(0,0,0,0.3);</span><br/>
                   <span className="css-property tab">-webkit-box-shadow: </span> 
-                  <span className="css-value">12px 20px 25px 0px rgba(0,0,0,0.4);</span><br/>
+                  <span className="css-value">0px 18px 18px -12px rgba(0,0,0,0.3);</span><br/>
                   &#125;
                </CodeBlock>
                <CodeBlock language="output">
-                  <div style={{margin: "3em auto", color: "white", display: "flex", justifyContent: "center", alignItems: "center", fontWeight: "600", fontSize: "1rem", background: "#1DD59C", width: "50%", height: "5em", boxShadow: "12px 20px 25px 0px rgba(0,0,0,0.4)"}}>Hello World!</div>
+                  <div style={{margin: "3em auto", color: "white", display: "flex", justifyContent: "center", alignItems: "center", fontWeight: "600", fontSize: "1rem", background: "#1DD59C", width: "50%", height: "5em", boxShadow: "0px 18px 18px -12px rgba(0,0,0,0.3)"}}>Hello World!</div>
                </CodeBlock>
             </React.Fragment>,
          key: 104,
