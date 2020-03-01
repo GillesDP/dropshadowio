@@ -36,7 +36,9 @@ function HowToUse() {
                <CodeBlock>
                   <span className="css-property">box-shadow:</span> initial|inherit|inset x-offset y-offset blur spread color;
                </CodeBlock>
-               <p><b>Blur</b>, <b>spread</b> and <b>color</b> are optional values, while <b>x-offset</b> and <b>y-offset</b> are required. By default a box shadow will also have the <b>initial</b> property attached to it.</p>
+               <p>
+                  <b>Blur</b>, <b>spread</b> and <b>color</b> are optional values, while <b>x-offset</b> and <b>y-offset</b> are required. By default a box shadow will also have the <b>initial</b> property attached to it.
+               </p>
             </React.Fragment>,
          key: 102,
          default: false
@@ -157,7 +159,7 @@ function HowToUse() {
          </Section>
 
          <Section className="contact-cta" title="Great things come together" subtitle="Help me improve this tool" verticalCenter>
-            <Button theme="blue">message me</Button>
+            <Button theme="blue"><a href="mailto: hello@dropshadow.io">message me</a></Button>
             <Button theme="border"><a href="https://github.com/GillesDP" target="_blank" rel="noopener noreferrer">github</a></Button>
          </Section>
       </React.Fragment>

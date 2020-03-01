@@ -13,8 +13,7 @@
       }
    }
    .tool__main {
-      padding-top: 4em;
-      height: calc(100vh - 5em);
+      padding: 4em 0;
       position: relative;
       z-index: 1;
       @include max-md {

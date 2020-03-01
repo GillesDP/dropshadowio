@@ -20,7 +20,7 @@ function Home() {
          <hr/>
 
          <Section title="How To Use">
-            <p>Using gradients in css is very simple and only requires a few lines of code. You can use both inline or external css to apply the styles. The prefix -webkit- is added in order to support older browsers.</p>
+            <p>Using drop shadows in css is very simple and only requires a few lines of code. You can use both inline or external css to apply the styles. The prefix -webkit- is added in order to support older browsers.</p>
             <p style={{marginBottom: "2em"}}>
                <b>Note:</b> This is a demo, please use your own shadow by clicking the copy button.<br/>
             </p>
@@ -49,7 +49,7 @@ function Home() {
             <div className="row">
                <div className="col-lg-6">
                   <h2>History</h2>
-                  <p>It all started on the most ordinary day at the most usual time. I needed a way to generate drop shadows quickly. After Googling for a while I could not find any tool that wasn’t based on regular sliders or had poor design choices. That’s when I decided to create something fresh, with user usability in mind.</p>
+                  <p>It all started on the most ordinary day at the most usual time. I needed a way to generate drop shadows quickly. After doing some research, I noticed there were quite a few tools out there already, but none of them seemed to fulfill my needs. That’s when I decided to create something fresh, with user usability in mind.</p>
                   <h2>The goal</h2>
                   <p>The goal has been clear since the very beginning; Offering front-end developers and designers a user-friendly and attractive tool to create their drop shadows. </p>
                </div>
