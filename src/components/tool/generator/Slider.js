@@ -85,7 +85,7 @@ function Slider(props) {
       let item = document.getElementById(props.id);
 
       // Highlight input text on click
-      item.select();
+      // item.select();
       
       // Calculate the xCoord with formula ( -28 => dragger offset)
       let xCoord = Math.floor((mouseCoords[0] - area.left - item.offsetLeft - draggerOffset) * round) / round;

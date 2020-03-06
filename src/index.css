@@ -1,5 +1,5 @@
-html {font-size: 16px;}
-body {position: relative;}
+html {font-size: 100%;}
+body {position: relative; font-size: 100%;}
 img {pointer-events: none;}
 * {
    font-family: 'work sans', sans-serif;

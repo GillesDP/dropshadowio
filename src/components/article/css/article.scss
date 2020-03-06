@@ -9,18 +9,13 @@
       padding-top: 0;
    }
    .article-controller__nav {
-      border-left-style: solid;
-      border-left-color: transparent;
-      border-width: .4em;
+      border-left: solid transparent .4em;
       border-image: url(../../global/images/Dots1x5.png) 30 repeat;
       padding: .5em 1.5em;
       @include max-md {
          display: none;
       }
       height: 100%;
-      border-top: 0;
-      border-right: 0;
-      border-bottom: 0;
    }
    .article-controller__article {
       width: 66%;
@@ -78,6 +73,11 @@ button.article-nav__link--active {
       -moz-user-select: none;
       -o-user-select: none;
       user-select: none;
+      @include max-sm {
+         padding: 3em;
+         width: 100%;
+         object-fit: cover;
+      }
    }
    .article__index {
       font-family: 'Roboto Mono', Monaco, courier, monospace;

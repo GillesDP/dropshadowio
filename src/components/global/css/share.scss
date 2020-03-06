@@ -44,14 +44,12 @@
       }
    }
    .share__icon {
-      a {
-         padding: 1.5em 2em;
-         display: block;
-         span {
-            @include spaced-text;
-            color: color(blue);
-            margin-right: 1em;
-         }
+      padding: 1.5em 2em;
+      display: block;
+      span {
+         @include spaced-text;
+         color: color(blue);
+         margin-right: 1em;
       }
    }
 }

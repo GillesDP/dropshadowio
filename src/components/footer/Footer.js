@@ -27,7 +27,7 @@ function Footer() {
                   <ul>
                      <li>Social</li>
                      <li><a href="https://github.com/GillesDP" target="_blank" rel="noopener noreferrer">Github</a></li>
-                     <li><a href="https://twitter.com/GewoonGilles" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                     <li><a href="https://twitter.com/dropshadow_io" target="_blank" rel="noopener noreferrer">Twitter</a></li>
                   </ul>
                </div>
                <div className="col-lg-4 order-1 order-md-4">
