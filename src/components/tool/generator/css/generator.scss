@@ -50,9 +50,10 @@
       }
       .slider {
          display: block;
-         margin: 1em 0 1.5em 2em;
+         margin: 1em 0 .5em 2em;
          @include max-sm {margin-left: 0;}
          &:last-of-type {
+            margin-top: 0;
             margin-bottom: 0;
          }
       }

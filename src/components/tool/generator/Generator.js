@@ -80,7 +80,7 @@ function Generator(props) {
             <small>positioning</small>
             <div className="generator__container">
 
-               <Dragger changeOffset={setOffset} offset={offset} />
+               <Dragger changeOffset={setOffset} offset={offset} active={props.active} changeActive={props.changeActive}/>
                <div className="d-block flex-grow-1">
                   <fieldset>
                      <legend>Offset</legend>
@@ -88,8 +88,8 @@ function Generator(props) {
                      <Input label="y-offset" id="yOffset" name="yoff" type="number" value={offset.y} changeData={props.changeData}/>
                   </fieldset>
                   
-                  <Slider label="blur" id="blur" name="blur" changeValue={setBlur} value={blur} center={false} boundries={[0, 50]}/>
-                  <Slider label="spread" id="spread" name="spread" changeValue={setSpread} value={spread} center={true} boundries={[-25, 25]}/>
+                  <Slider label="blur" id="blur" name="blur" changeValue={setBlur} value={blur} center={false} boundries={[0, 50]} active={props.active} changeActive={props.changeActive}/>
+                  <Slider label="spread" id="spread" name="spread" changeValue={setSpread} value={spread} center={true} boundries={[-25, 25]} active={props.active} changeActive={props.changeActive} />
                </div>
 
             </div>
@@ -99,7 +99,7 @@ function Generator(props) {
             <div className="generator__container">
                <div className="generator__col">
                   <ColorPicker type="shadow" label="shadow" value={shadow} changeValue={setShadow}/>
-                  <Slider label="opacity" id="opacity" name="opacity" changeValue={setOpacity} value={opacity} center={false} boundries={[0,1]} round={100}/>
+                  <Slider label="opacity" id="opacity" name="opacity" changeValue={setOpacity} value={opacity} center={false} boundries={[0,1]} round={100} active={props.active} changeActive={props.changeActive} />
                </div>
                <div className="generator__col">
                   <ColorPicker type="background" label="background" value={background} changeValue={setBackground}/>

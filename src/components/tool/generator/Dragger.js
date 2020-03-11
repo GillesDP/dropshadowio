@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './css/dragger.scss';
 
 function Dragger(props) {
    const dragArea = React.createRef();
    const dragItem = React.createRef();
-   let [active, setActive] = useState(false);
    
    let draggerOffset = 16;
    let draggerStyle = {
@@ -12,18 +11,14 @@ function Dragger(props) {
    }
 
    function handleMouseDown() {
-      setActive(true);
-   }
-
-   function handleMouseUp() {
-      setActive(false)
+      props.changeActive(true);
    }
 
    function handleMouseMove(e) {
       e.preventDefault();
       const mouseCoords = [e.clientX, e.clientY];
 
-      if (active) {
+      if (props.active) {
          newPosition(mouseCoords);
       }
    }
@@ -33,6 +28,18 @@ function Dragger(props) {
       const mouseCoords = [e.clientX, e.clientY];
 
       newPosition(mouseCoords);
+   }
+
+   function handleTouchStart() {
+      props.changeActive(true)
+   }
+
+   function handleTouchMove(e) {
+      const touchCoords = [e.targetTouches[0].clientX, e.targetTouches[0].clientY];
+
+      if (props.active) {
+         newPosition(touchCoords);
+      }
    }
 
    function newPosition(mouseCoords) {
@@ -66,9 +73,11 @@ function Dragger(props) {
          className="drag-area" 
          ref={dragArea} 
          onMouseMove={handleMouseMove} 
-         onMouseDown={handleMouseDown} 
-         onClick={handleMouseClick} 
-         onMouseUp={handleMouseUp}
+         onMouseDown={handleMouseDown}
+         onClick={handleMouseClick}
+         onTouchStart={handleTouchStart}
+         onTouchMove={handleTouchMove}
+         onMouseLeave={()=> props.changeActive(false)} 
       >
          <div id="dragger" ref={dragItem} style={draggerStyle}></div>
       </div>

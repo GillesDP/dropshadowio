@@ -5,7 +5,7 @@ function Slider(props) {
    let sliderElement = React.createRef();
    let draggerElement = React.createRef();
    let draggerOffset = 28;
-   const [active, setActive] = useState(false);
+   // const [active, setActive] = useState(false);
    const [exact, setExact] = useState(0);
 
    let transformStyle = {
@@ -28,19 +28,27 @@ function Slider(props) {
    /*** Event ***/
 
    function handleMouseDown() {
-      setActive(true);
-   }
-
-   function handleMouseUp() {
-      setActive(false)
+      props.changeActive(true);
    }
 
    function handleMouseMove(e) {
       e.preventDefault();
       const mouseCoords = [e.clientX, e.clientY];
 
-      if (active) {
+      if (props.active) {
          newPosition(mouseCoords);
+      }
+   }
+
+   function handleTouchStart() {
+      props.changeActive(true);
+   }
+
+   function handleTouchMove(e) {
+      const touchCoords = [e.targetTouches[0].clientX, e.targetTouches[0].clientY];
+
+      if (props.active) {
+         newPosition(touchCoords);
       }
    }
 
@@ -128,9 +136,11 @@ function Slider(props) {
          ref={sliderElement} 
          className="slider" 
          onMouseDown={handleMouseDown} 
-         onMouseUp={handleMouseUp} 
          onMouseMove={handleMouseMove} 
          onClick={handleClick}
+         onTouchStart={handleTouchStart}
+         onTouchMove={handleTouchMove}
+         onMouseLeave={()=> props.changeActive(false)}
          >
          <label htmlFor={props.id}> {props.label} </label>
          <div className="slider__axis" style={props.center ? {justifyContent: "center"} : null}>

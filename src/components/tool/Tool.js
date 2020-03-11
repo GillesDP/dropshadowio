@@ -7,7 +7,7 @@ import PostPreview from './previews/PostPreview';
 import CodeBlock from '../global/CodeBlock';
 import './tool.scss';
 
-function Tool() {
+function Tool(props) {
    const [data, setData] = useState({
       offset: {x: 0, y: 12},
       blur: 24,
@@ -25,14 +25,17 @@ function Tool() {
       }
    });
 
+
    return (
-      <div className="tool">
+      <div className="tool" onMouseUp={() => props.changeActive(false)} onTouchEnd={() => props.changeActive(false)}>
          <div className="tool__main">
             <div className="container">
                <div className="row">
                   <div className="col-lg-8">
                      {/* Read & Change */}
                      <Generator 
+                        active={props.active}
+                        changeActive={props.changeActive}
                         data={data}
                         changeData={(obj) => setData(obj)} 
                      />

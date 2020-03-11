@@ -11,9 +11,11 @@ function Home() {
       document.title = "Dropshadow.io";
    }, []);
 
+   const [active, setActive] = React.useState(false);
+
    return (
       <React.Fragment>
-         <Tool/>
+         <Tool active={active} changeActive={(bool) => setActive(bool)} />
          <div className="container" style={{paddingBottom: "6em"}}>
             <Share/>
          </div>
