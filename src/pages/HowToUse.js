@@ -5,12 +5,10 @@ import Section from "../components/global/Section";
 import ArticleController from "../components/article/ArticleController";
 import CodeBlock from "../components/global/CodeBlock";
 import Button from "../components/global/Button";
+import SetMeta from "./SetMeta";
 
 function HowToUse() {
    ReactGA.pageview(window.location.pathname);
-   React.useEffect(() => {
-      document.title = "Dropshadow.io | How To Use";
-   }, []);
 
    // Web
    const webArticles = [
@@ -139,6 +137,11 @@ function HowToUse() {
 
    return(
       <React.Fragment>
+         <SetMeta>
+            <title>Dropshadow - How To Use</title>
+            <meta name="description" content="Drop shadows are hot these days. You can’t think them away and they are crucial to any website in order to create depth."/>
+         </SetMeta>
+
          <PageHeader category="how to use" dots>Upgrade your workflow</PageHeader>
          <Section title="Html & Css" subtitle="On web" background="gray">
             <p>Drop shadows are hot these days. You can’t think them away and they are crucial to any website in order to create depth.</p>

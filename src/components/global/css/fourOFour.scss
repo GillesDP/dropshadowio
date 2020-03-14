@@ -1,0 +1,91 @@
+@import 'base/colors';
+@import 'base/mixins';
+
+.four-o-four {
+   overflow: hidden;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background: white;
+   min-height: 100vh;
+   width: 100%;
+   z-index: 99;
+
+   // Grid
+   display: grid;
+   grid-template-columns: 100%;
+   grid-template-rows: 3fr 1fr auto;
+   @include max-sm {
+      grid-template-rows: 4fr auto;
+   }
+
+   .four-o-four__content {
+      display: block;
+      text-align: center;
+      align-self: center;
+      padding: 2rem 0;
+      small {
+         color: color(blue);
+      }
+      h1 {
+         font-size: 3em;
+         margin: 0;
+         text-transform: capitalize;
+      }
+      h2 {
+         font-size: 16rem;
+         font-weight: bold;
+         font-family: 'Roboto Mono', Monaco, courier, monospace;
+         color: color(blue);
+         margin: 0;
+         position: relative;
+         display: inline-block;
+         @include max-sm {
+            font-size: 50vw;
+         }
+         &::after {
+            content: "404";
+            position: absolute;
+            z-index: -1;
+            color: color(border);
+            font-size: 48rem;
+            opacity: .25;
+            left: -100%;
+            top: -100%;
+            @include max-md {
+               content: "";
+            }
+         }
+      }
+      button {
+         background: color(green);
+      }
+      .four-o-four__content__number {
+         display: block;
+      }
+   }
+   .four-o-four__footer {
+      align-self: center;
+      text-align: center;
+      p {
+         margin: 2em 0;
+         color: color(black);
+         font-weight: bold;
+      }
+   }
+   .four-o-four__links {
+      align-self: end;
+      text-align: center;
+      @include max-sm {
+         display: none;
+      }
+      a {
+         color: color(text);
+         &:hover {
+            color: color(blue);
+         }
+      }
+   }
+}

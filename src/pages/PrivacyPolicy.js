@@ -3,21 +3,24 @@ import ReactGA from "react-ga";
 import Collapsible from "../components/global/Collapsible";
 import Section from "../components/global/Section";
 import PageHeader from "../components/global/PageHeader";
+import SetMeta from "./SetMeta";
 
 function PrivacyPolicy() {
    ReactGA.pageview(window.location.pathname);
-   React.useEffect(() => {
-      document.title = "Dropshadow.io | Privacy Policy";
-   }, []);
 
    return (
       <React.Fragment>
+         <SetMeta>
+            <title>Dropshadow.io - Privacy Policy</title>
+            <meta name="description" content="Your privacy is important to us. It is Dropshadow.io’s policy to respect your privacy regarding any information we may collect from you across our website."/>
+         </SetMeta>
+
          <PageHeader category="legal" pageUpdate="27th February 2020">Privacy Policy</PageHeader>
          <Section className="privacy-policy" background="gray">
             <div className="row">
                <div className="col-lg-8">
-                  <p style={{marginBottom: "2em"}}>Your privacy is important to us. It is Dropshadow.io’s policy to respect your privacy regarding any information we may collect from you across our website, and other sites we own and operate. We only ask for personal information when we truly need it to provide a service to you.</p>
-                  <p>We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used. We don’t share any personally identifying information publicly or with third-parties, except when required to by law.</p>
+                  <p style={{marginBottom: "1em"}}>Your privacy is important to us. It is Dropshadow.io’s policy to respect your privacy regarding any information we may collect from you across our website, and other sites we own and operate. We only ask for personal information when we truly need it to provide a service to you.</p>
+                  <p style={{marginBottom: "2em"}}>We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used. We don’t share any personally identifying information publicly or with third-parties, except when required to by law.</p>
                   <Collapsible heading="What data do we collect?">
                      <div className="collapsible__text">
                         <p>Dropshadow.io collects the data listed below:</p>
@@ -70,7 +73,7 @@ function PrivacyPolicy() {
                            <li>Understanding how you use our website</li>
                            <li>Assuring proper functionality of the site</li>
                         </ul>
-                        <p>There are a number of different types of cookies, however, our website uses functionality cookies. We use these cookies so that we recognize you on our website and remember your previously selected preferences. These could include what language you prefer and location you are in. A mix of first-party and third-party cookies are used</p><br/>
+                        <p>There are a number of different types of cookies, however, our website uses functionality cookies. We use these cookies so that we recognize you on our website and remember your previously selected preferences. These could include what language you prefer and location you are in. A mix of first-party and third-party cookies are used.</p><br/>
                         <p>You can set your browser not to accept cookies, and the above website tells you how to remove cookies from your browser. However, in a few cases, some of our website features may not function as a result.</p>
                      </div>
                   </Collapsible>

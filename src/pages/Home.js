@@ -4,17 +4,20 @@ import Tool from "../components/tool/Tool";
 import Share from "../components/global/Share";
 import CodeBlock from "../components/global/CodeBlock";
 import Section from "../components/global/Section";
+import SetMeta from "./SetMeta";
 
 function Home() {
    ReactGA.pageview(window.location.pathname);
-   React.useEffect(() => {
-      document.title = "Dropshadow.io";
-   }, []);
 
    const [active, setActive] = React.useState(false);
 
    return (
       <React.Fragment>
+         <SetMeta>
+            <title>Dropshadow - Online Dropshadow Generator</title>
+            <meta name="description" content="Dropshadow.io is an online tool to create great looking dropshadows and easily convert them into CSS."/>
+         </SetMeta>
+
          <Tool active={active} changeActive={(bool) => setActive(bool)} />
          <div className="container" style={{paddingBottom: "6em"}}>
             <Share/>
