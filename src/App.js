@@ -18,7 +18,7 @@ function App() {
       <Router>
          <SetMeta>
             <title>Dropshadow - Online Dropshadow Generator</title>
-            <meta name="description" content="Dropshadow.io is an online tool to create great looking dropshadows and easily convert them into CSS."/>
+            <meta name="description" content="Dropshadow.io is an online tool to create great looking dropshadows and easily convert them into CSS."></meta>
          </SetMeta>
          
          <React.Fragment>

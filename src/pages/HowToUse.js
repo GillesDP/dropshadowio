@@ -139,7 +139,7 @@ function HowToUse() {
       <React.Fragment>
          <SetMeta>
             <title>Dropshadow - How To Use</title>
-            <meta name="description" content="Drop shadows are hot these days. You can’t think them away and they are crucial to any website in order to create depth."/>
+            <meta name="description" content="Drop shadows are hot these days. You can’t think them away and they are crucial to any website in order to create depth."></meta>
          </SetMeta>
 
          <PageHeader category="how to use" dots>Upgrade your workflow</PageHeader>

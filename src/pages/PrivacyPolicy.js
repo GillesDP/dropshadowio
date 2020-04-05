@@ -12,7 +12,7 @@ function PrivacyPolicy() {
       <React.Fragment>
          <SetMeta>
             <title>Dropshadow.io - Privacy Policy</title>
-            <meta name="description" content="Your privacy is important to us. It is Dropshadow.io’s policy to respect your privacy regarding any information we may collect from you across our website."/>
+            <meta name="description" content="Your privacy is important to us. It is Dropshadow.io’s policy to respect your privacy regarding any information we may collect from you across our website."></meta>
          </SetMeta>
 
          <PageHeader category="legal" pageUpdate="27th February 2020">Privacy Policy</PageHeader>

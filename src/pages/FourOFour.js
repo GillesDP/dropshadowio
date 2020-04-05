@@ -8,7 +8,7 @@ function FourOFour() {
       <div className="four-o-four">
          <SetMeta>
             <title>Dropshadow.io - 404</title>
-            <meta name="description" content="404! Seems like you're on the wrong page. Please get back to our site!"/>
+            <meta name="description" content="404! Seems like you're on the wrong page. Please get back to our site!"></meta>
          </SetMeta>
          <div className="four-o-four__content">
             <small>Seems Like...</small>
